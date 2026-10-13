@@ -1,0 +1,47 @@
+SINIA & SANTANU REAL-TIME CHAT — ONE-TIME SETUP
+================================================
+
+IMPORTANT
+- This is a real Firebase-backed chat UI, not a simulated chat. It will NOT send messages until Firebase is configured and the two account emails are inserted into the rules.
+- Host the whole folder on an HTTPS static host (for example GitHub Pages, Netlify, or Firebase Hosting). Opening index.html as file:// is not enough for a reliable hosted chat.
+- Never publish service-account JSON files or Firebase Admin credentials. The Web App config is intended for client use; Firestore rules protect the data.
+
+1) CREATE A FIREBASE PROJECT
+- Open https://console.firebase.google.com/ and create a project.
+- In Project settings > General > Your apps, add a Web app and copy its config.
+- Replace the placeholder values in firebase-config.js with the Web App config values.
+- Add the website's final HTTPS domain to Authentication > Settings > Authorized domains.
+
+2) ENABLE SIGN-IN AND CREATE THE TWO ACCOUNTS
+- In Build > Authentication > Sign-in method, enable Email/Password.
+- In Authentication > Users, add one account for Santanu and one for Sinia. Set their passwords privately; do not put passwords in this ZIP.
+- Use the exact same two email addresses in BOTH firebase-config.js (SINIA_CHAT_ALLOWED_EMAILS) and firestore.rules, replacing:
+  REPLACE_WITH_SANTANU_EMAIL
+  REPLACE_WITH_SINIA_EMAIL
+- The sign-in form is for those pre-created accounts; visitors cannot create an account from the page.
+
+3) CREATE FIRESTORE AND APPLY SECURITY RULES
+- In Build > Firestore Database, create a database.
+- Open the Rules tab, paste the contents of firestore.rules after replacing both email placeholders, and Publish.
+- Do not use open rules such as allow read, write: if true. The included rules restrict reads and message creation to the two allowed email addresses and prevent edits/deletions.
+
+4) HOST THE PROJECT
+- Upload the ENTIRE extracted folder, keeping index.html, firebase-config.js, and all media paths together.
+- Deploy it to an HTTPS host. Open the deployed website on both phones.
+- Sign in with each person's account. Messages sync live and the latest 250 messages are shown in chronological order.
+
+5) QUICK TROUBLESHOOTING
+- “Setup needed”: firebase-config.js still has placeholders or Firebase scripts could not load.
+- Sign-in fails: check Email/Password is enabled and the user exists in Firebase Authentication.
+- Messages do not load/send: verify exact emails in firestore.rules, publish the rules, check the project ID, authorized domain, internet connection, and browser console.
+- Do not share either account password. Anyone whose email is on the allowlist can read this shared chat, so use only your two intended email addresses.
+
+FEATURES
+- Live cross-device updates via Firestore snapshots
+- Email/password sign-in via Firebase Authentication
+- Persistent message history (latest 250 displayed)
+- Timestamps, sender labels, emoji quick-inserts, Enter-to-send (Shift+Enter for a new line)
+- Responsive romantic styling
+- Message length limit and restrictive Firestore rules
+
+Existing scrapbook media and sections are retained. Firebase's web SDK is loaded from Google's CDN, so the chat requires internet; the rest of the scrapbook remains static.
