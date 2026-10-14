@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7e8df"><title>Sinia ♡ Santanu — The Little Love Scrapbook</title>
+<style>
+:root{--paper:#fffaf1;--cream:#f7eee2;--rose:#d76b87;--pink:#f5c6d1;--ink:#684b4b;--brown:#92736b;--line:#ead8cb;--shadow:0 14px 35px #81574a18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#f5e9df;font-family:"Trebuchet MS",system-ui,sans-serif;overflow-x:hidden}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8a4964;outline-offset:3px}a{color:#b75c79}
+.paper-texture{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.27;background-image:radial-gradient(#c7a89b .7px,transparent .7px);background-size:11px 11px}.ribbon{height:12px;background:repeating-linear-gradient(135deg,#e9a9b8 0 12px,#f8d8dd 12px 24px);border-bottom:2px solid #fff5ef}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:21px 0}.brand{font-family:Georgia,serif;font-style:italic;font-size:1.2rem}.brand b{color:var(--rose)}.pill{border:1px solid #e8cfd0;background:#fff9f1;border-radius:999px;padding:10px 14px;color:var(--ink);box-shadow:0 4px 10px #81574a0b}
+.quick-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding:8px 0 22px}.quick-links a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #ead8cf;background:#fff9f1;border-radius:999px;padding:11px 17px;color:var(--ink);box-shadow:0 4px 12px #81574a0b;transition:transform .2s,background .2s}.quick-links a:hover{transform:translateY(-2px);background:#fff0f4}.hero{padding:28px 0 66px;text-align:center}.sticker{display:inline-block;padding:9px 14px;background:#e6ebdf;border:1px solid #d4dfcc;border-radius:5px;transform:rotate(-2deg);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(2.7rem,8vw,5.7rem);line-height:1.04;margin:24px 0 15px}.hero h1 em{color:var(--rose);font-weight:400}.hero p{max-width:610px;margin:auto;color:#8d6d67;line-height:1.85;font-size:1.05rem}.date{font-size:.82rem;letter-spacing:.22em;font-weight:800;color:#bd6680;margin:22px 0}.hero-art{display:flex;align-items:center;justify-content:center;gap:clamp(4px,3vw,28px);font-size:clamp(2.3rem,7vw,4.2rem);margin:24px 0}.hero-art span:nth-child(1){transform:rotate(-12deg)}.hero-art span:nth-child(2){font-size:clamp(3rem,9vw,5.5rem);filter:drop-shadow(0 8px 5px #c47b8429)}.hero-art span:nth-child(3){transform:rotate(12deg)}
+.gif-memory{display:flex;justify-content:center;margin:8px auto 0;padding:0 12px}.gif-memory img{display:block;width:min(100%,360px);height:auto;border-radius:14px;border:5px solid #fffaf1;box-shadow:0 8px 22px #81574a20}.gif-caption{text-align:center;color:#a36c78;font-family:Georgia,serif;font-style:italic;font-size:.95rem;margin:9px 0 0}.quote-gif{width:min(100%,300px);display:block;margin:22px auto 0;border-radius:12px;border:4px solid #fffaf1;box-shadow:0 7px 18px #81574a1a}.gif-note{font-size:.8rem;color:#a27f78;text-align:center;margin-top:8px}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:25px}.primary,.secondary{border-radius:8px;padding:13px 18px}.primary{background:var(--rose);color:#fffaf5;border:1px solid #c65d7b;box-shadow:0 6px 0 #c65d7b;font-weight:800}.primary:active{transform:translateY(3px);box-shadow:0 3px 0 #c65d7b}.secondary{background:#fffaf1;border:1px solid #e4c8c7;color:var(--ink)}
+section{padding:48px 0}.section-head{text-align:center;margin:0 auto 28px;max-width:650px}.kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#b46c7d;font-weight:900}h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,3.2rem);margin:9px 0 12px}.section-head p{line-height:1.8;color:#92736b;margin:0}
+.photo-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.polaroid{position:relative;background:#fffdf8;padding:13px 13px 54px;box-shadow:0 8px 20px #694b4b22;transform:rotate(-2deg);max-width:470px;margin:12px auto;width:100%}.polaroid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#f4e2dc}.polaroid .caption{text-align:center;position:absolute;bottom:16px;left:8px;right:8px;font-family:"Brush Script MT","Segoe Script",cursive;font-size:1.25rem;color:#9a5a6b}.tape{height:18px;width:78px;background:#efcbd0b8;position:absolute;top:-9px;left:calc(50% - 39px);transform:rotate(-4deg)}
+.hand-note{position:relative;background:#fff9eb;border:1px solid #ead9c5;padding:30px 27px;box-shadow:var(--shadow);line-height:1.95;transform:rotate(1deg)}.hand-note:before{content:"";position:absolute;inset:9px;border:1px dashed #e7cbbd;pointer-events:none}.hand-note>*{position:relative}.scribble{font-family:"Brush Script MT","Segoe Script",cursive;color:#b75c79;font-size:1.55rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.scrap-card{position:relative;background:#fffaf0;border:1px solid #ead9cb;padding:23px 19px;box-shadow:var(--shadow);text-align:center}.scrap-card:nth-child(1){transform:rotate(-1deg)}.scrap-card:nth-child(2){transform:rotate(1.2deg)}.scrap-card:nth-child(3){transform:rotate(-.5deg)}.scrap-card .emoji{font-size:2rem}.scrap-card h3{font-family:Georgia,serif;font-size:1.25rem;font-weight:400;margin:12px 0 8px}.scrap-card p{font-size:.94rem;line-height:1.75;color:#92736b;margin:0}
+
+.photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.gallery-item{margin:0;background:#fffdf8;padding:10px 10px 42px;box-shadow:0 8px 20px #694b4b22;position:relative}
+.gallery-item:nth-child(1){transform:rotate(-2deg)}.gallery-item:nth-child(2){transform:rotate(1.5deg)}.gallery-item:nth-child(3){transform:rotate(-1deg)}
+.gallery-item img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#f4e2dc}
+.gallery-item figcaption{text-align:center;position:absolute;bottom:12px;left:6px;right:6px;font-family:Georgia,serif;font-style:italic;color:#9a5a6b;font-size:.98rem}
+@media(max-width:650px){.photo-gallery{grid-template-columns:1fr;max-width:420px;margin:auto}.gallery-item{transform:none!important}}
+.quote-paper{max-width:800px;margin:auto;position:relative;background:#fff9ed;border:1px solid #e9d6c8;padding:clamp(30px,6vw,56px);text-align:center;box-shadow:var(--shadow)}.quote-paper:before,.quote-paper:after{content:"✿";position:absolute;color:#d58aa0;font-size:1.5rem}.quote-paper:before{left:16px;top:12px}.quote-paper:after{right:16px;bottom:12px}.quote-paper .heart{font-size:2.4rem}.quote-paper blockquote{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.5rem,4vw,2.45rem);line-height:1.5;margin:16px 0;color:#81545d}.quote-paper cite{font-style:normal;font-weight:800;color:#b75c79}
+.playlist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.track{background:#fffaf1;border:1px solid #ead9cb;padding:14px;box-shadow:var(--shadow);min-width:0}.track-head{display:flex;align-items:center;gap:10px;min-height:76px;padding:3px 0 12px}.track-icon{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;background:#f6e0e3;border-radius:50%;font-size:1.4rem}.track small{letter-spacing:.12em;color:#b46c7d;font-size:.63rem;font-weight:900}.track h3{font-family:Georgia,serif;font-size:1.08rem;font-weight:400;margin:3px 0}.track p{color:#92736b;font-size:.85rem;margin:0}.audio-player{background:#fff4f2;border:1px solid #efd4d7;border-radius:12px;padding:12px}.audio-controls{display:flex;align-items:center;gap:10px}.audio-play{width:42px;height:42px;border:0;border-radius:50%;background:var(--rose);color:white;font-size:1.05rem;flex:0 0 42px;box-shadow:0 3px 0 #c65d7b}.audio-play:focus-visible,.seek:focus-visible{outline:3px solid #81545d;outline-offset:3px}.audio-meta{min-width:0;flex:1}.audio-time{display:flex;justify-content:space-between;color:#987b71;font-size:.72rem;font-variant-numeric:tabular-nums;margin-top:9px}.seek{width:100%;accent-color:var(--rose);display:block;margin:9px 0 0;cursor:pointer}.audio-caption{font-size:.76rem;color:#987b71;margin-top:10px}.music-note{text-align:center;color:#92736b;font-size:.9rem;margin-top:18px}
+.letter-wrap{max-width:680px;margin:auto;text-align:center}.letter{display:none;text-align:left;margin-top:22px;background:#fff9eb;border:1px solid #ead9cb;box-shadow:var(--shadow);padding:28px;line-height:1.95}.letter.open{display:block;animation:appear .35s ease-out}.letter .sign{font-family:"Brush Script MT","Segoe Script",cursive;font-size:1.6rem;color:#b75c79}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;padding:40px 0 55px;color:#987b71;font-size:.9rem}footer .footer-critters{font-size:2rem;margin-bottom:10px}
+@media(max-width:760px){.photo-layout{grid-template-columns:1fr;gap:18px}.polaroid{max-width:420px}.grid3{grid-template-columns:1fr;gap:17px}.scrap-card{transform:none!important}.playlist{grid-template-columns:1fr;max-width:560px;margin:auto}.track{padding:16px}.topbar{align-items:flex-start}.hero{padding-top:25px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Premium surprise, 3D night sky, games */
+.premium-section{padding:56px 0}
+.gift-stage{max-width:760px;margin:auto;text-align:center;background:linear-gradient(135deg,#fff8f1,#fbe2ea);border:1px solid #e9c8d1;border-radius:24px;padding:28px 18px;box-shadow:0 18px 45px #8e53631a;overflow:hidden}
+.gift-box{position:relative;width:150px;height:135px;margin:26px auto 20px;border:0;background:none;display:block;filter:drop-shadow(0 14px 9px #a04d6b30);transition:transform .35s}
+.gift-box:hover{transform:translateY(-6px) rotate(-2deg)}
+.gift-base{position:absolute;left:14px;right:14px;bottom:0;height:88px;background:linear-gradient(120deg,#d75c84,#f29db7);border-radius:8px 8px 15px 15px;border:2px solid #c95278}
+.gift-lid{position:absolute;left:4px;right:4px;top:28px;height:27px;background:linear-gradient(90deg,#f7b7c8,#dc6d91);border:2px solid #c95278;border-radius:7px;transform-origin:12% 90%;transition:transform .7s cubic-bezier(.2,.8,.2,1);z-index:2}
+.gift-ribbon-v{position:absolute;left:64px;top:30px;width:22px;height:102px;background:#fff1bd;border-left:2px solid #e9ce84;border-right:2px solid #e9ce84;z-index:3}
+.gift-bow{position:absolute;top:7px;left:51px;width:50px;height:31px;border:8px solid #fff1bd;border-radius:80% 20% 70% 25%;transform:rotate(-12deg);z-index:4}
+.gift-box.opened .gift-lid{transform:translate(-35px,-52px) rotate(-25deg)}
+.gift-box.opened{animation:giftPop .7s ease}
+@keyframes giftPop{50%{transform:scale(1.13)}}
+.gift-message{display:none;background:#fffdf7;border:1px dashed #d98ca4;border-radius:15px;padding:20px;margin:18px auto 0;max-width:520px;line-height:1.8;animation:reveal .65s both}
+.gift-message.show{display:block}
+@keyframes reveal{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.sky-wrap{position:relative;max-width:900px;margin:auto;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse at 50% 90%,#59406d,#17152f 65%,#090c20);border:1px solid #6d547e;box-shadow:0 20px 50px #3a234526}
+#love-sky{display:block;width:100%;height:360px}
+.sky-caption{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#fff2fa;text-shadow:0 2px 10px #080718;padding:0 16px;pointer-events:none}
+.game-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:850px;margin:auto}
+.game-card{background:#fffaf2;border:1px solid #ead4d2;border-radius:17px;padding:20px;text-align:center;box-shadow:var(--shadow)}
+.game-card h3{font-family:Georgia,serif;font-size:1.45rem;margin:8px 0}
+.heart-arena{height:155px;position:relative;overflow:hidden;background:linear-gradient(135deg,#fff0f5,#f8e9ef);border-radius:12px;margin:14px 0}
+.catch-heart{position:absolute;border:0;background:none;font-size:2rem;transition:left .15s,top .15s;filter:drop-shadow(0 3px 3px #b04b6b44)}
+.game-stats{font-weight:800;color:#b75c79;margin:8px}
+.memory-board{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0}
+.memory-tile{border:1px solid #e8c4d0;background:#f9e3eb;border-radius:9px;min-height:57px;font-size:1.6rem;color:#b75c79}
+.memory-tile.flipped,.memory-tile.matched{background:#fffdf8}
+.memory-tile.matched{border-color:#a5c1a0}
+.premium-note{font-size:.82rem;color:#9a7779;line-height:1.6}
+@media(max-width:620px){.game-grid{grid-template-columns:1fr}#love-sky{height:300px}.gift-stage{padding:23px 14px}.memory-tile{min-height:52px}}
+@media(prefers-reduced-motion:reduce){.gift-box,.gift-lid,.gift-message{animation:none!important;transition:none!important}}
+
+
+/* Cinematic envelope + opening sequence + timeline, reasons, garden and finale */
+#cinematic-intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#37254e 0%,#17142c 55%,#0c1020 100%);color:#fff5fb;transition:opacity .9s ease,visibility .9s ease}#cinematic-intro.dismissed{opacity:0;visibility:hidden;pointer-events:none}.intro-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none}.intro-orbs i{position:absolute;width:clamp(90px,22vw,220px);aspect-ratio:1;border-radius:50%;filter:blur(35px);background:#f06ca2;opacity:.22;animation:orbFloat 9s ease-in-out infinite alternate}.intro-orbs i:nth-child(1){left:5%;top:12%}.intro-orbs i:nth-child(2){right:4%;bottom:8%;background:#8b7dff;animation-delay:-3s}.intro-orbs i:nth-child(3){left:45%;top:65%;background:#ffb8cc;animation-delay:-6s}@keyframes orbFloat{to{transform:translate(35px,-30px) scale(1.2)}}#intro-stars{position:absolute;inset:0;width:100%;height:100%}.intro-copy{position:relative;text-align:center;padding:25px;max-width:700px;animation:introRise 1.3s both}.intro-overline{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:#ffc0d7}.intro-copy h1{font:400 clamp(3.5rem,13vw,7.5rem)/.98 Georgia,serif;margin:22px 0;background:linear-gradient(100deg,#fff4e9,#ff9dc4,#d8c9ff,#fff4e9);background-size:250% auto;color:transparent;background-clip:text;animation:gradientMove 6s linear infinite}.intro-copy p{font:italic clamp(1rem,3vw,1.35rem) Georgia,serif;color:#e8d5e5;min-height:3em;line-height:1.8}.intro-enter{border:1px solid #f5b8d1;background:#fff4f7;color:#7e3658;border-radius:999px;padding:14px 25px;font-weight:800;box-shadow:0 0 30px #ff8dbb40}.intro-enter:hover{transform:translateY(-2px)}@keyframes introRise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}@keyframes gradientMove{to{background-position:250% center}}
+.envelope-stage{perspective:1100px;max-width:620px;margin:30px auto 0;padding:22px 12px 10px;text-align:center}.envelope{position:relative;width:min(100%,440px);height:290px;margin:24px auto 18px;cursor:pointer;filter:drop-shadow(0 18px 20px #7d4c5928);outline:none}.env-back{position:absolute;inset:0;background:#dca3b0;border-radius:8px}.env-paper{position:absolute;z-index:2;left:8%;width:84%;height:84%;bottom:5%;padding:25px 22px 18px;background:repeating-linear-gradient(#fff9ec 0 31px,#eaded0 32px,#fff9ec 33px);border:1px solid #ead6c6;box-shadow:0 3px 12px #6d485018;text-align:left;transform:translateY(0);transition:transform 1s cubic-bezier(.2,.8,.2,1),height 1s;overflow:hidden}.env-paper .type-letter{font:italic 1rem/1.9 'Segoe Script','Brush Script MT',cursive;color:#76505d;white-space:pre-wrap}.env-paper .env-sign{display:block;text-align:right;margin-top:10px;color:#b75c79;font:italic 1.15rem 'Segoe Script',cursive}.env-flap{position:absolute;z-index:5;left:0;top:0;width:100%;height:58%;background:#e9b6c2;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease;backface-visibility:hidden}.env-pocket{position:absolute;z-index:4;inset:0;background:#f3cbd2;clip-path:polygon(0 100%,0 0,50% 56%,100% 0,100% 100%);border-radius:8px}.wax-seal{position:absolute;z-index:7;left:50%;top:44%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:#ffcfda;background:radial-gradient(circle at 30% 25%,#f16a80,#a9143b 70%);border:3px solid #f8a3b5;box-shadow:inset 0 0 0 3px #c83e5e,0 5px 12px #7b244444;font-size:1.6rem;transition:opacity .35s,transform .5s}.envelope.opened .env-flap{transform:rotateX(180deg);z-index:1}.envelope.opened .wax-seal{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(25deg)}.envelope.opened{height:430px}.envelope.opened .env-paper{height:auto;min-height:320px;bottom:auto;top:0;transform:none;z-index:6;overflow:visible;padding:24px 20px}.env-hint{color:#9d6c79;font-size:.9rem}.envelope:focus-visible{outline:3px solid #d76b87;outline-offset:6px}.handwriting{font-family:'Segoe Script','Brush Script MT',cursive!important}
+.timeline{max-width:760px;margin:auto;position:relative;padding:10px 0}.timeline:before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(#e99ab4,#d8b6de,#e99ab4)}.time-item{position:relative;margin:0 0 18px 54px;background:#fff9f0;border:1px solid #ead9cb;border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}.time-item:before{content:'♡';position:absolute;left:-43px;top:17px;width:22px;height:22px;border-radius:50%;background:#f7dce4;color:#bd5d7d;display:grid;place-items:center}.time-item small{letter-spacing:.15em;color:#b46c7d;font-weight:900}.time-item h3{font:400 1.35rem Georgia,serif;margin:7px 0}.time-item p{margin:0;line-height:1.75;color:#92736b}.reasons-wrap{max-width:850px;margin:auto;background:#fff9ef;border:1px solid #ead8cb;padding:clamp(20px,5vw,38px);border-radius:20px;box-shadow:var(--shadow);text-align:center}.reason-number{font:italic 1rem Georgia,serif;color:#b46c7d;letter-spacing:.12em}.reason-text{font:clamp(1.45rem,4vw,2.2rem)/1.4 Georgia,serif;min-height:3em;margin:16px 0;color:#684b4b}.garden{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:760px;margin:auto}.garden-flower{border:1px solid #ecd5d9;background:linear-gradient(145deg,#fff9f0,#fbe3ec);border-radius:16px;min-height:125px;padding:12px 7px;color:#805a65;box-shadow:var(--shadow);transition:transform .25s}.garden-flower:hover{transform:translateY(-5px) rotate(-2deg)}.garden-flower span{display:block;font-size:2rem;margin-bottom:7px}.garden-flower small{font-size:.78rem;line-height:1.4}.finale{position:relative;overflow:hidden;text-align:center;padding:clamp(45px,9vw,90px) 20px;border-radius:24px;color:#fff5fb;background:radial-gradient(ellipse at center,#4c2b55,#17142e 72%);box-shadow:0 18px 40px #5b29451c}.finale h2{background:linear-gradient(90deg,#fff1f7,#ff9ec6,#d8c8ff,#fff1f7);background-size:220%;background-clip:text;color:transparent;animation:gradientMove 7s linear infinite}.finale p{max-width:600px;margin:12px auto;line-height:1.9;color:#efdae9}.finale-heart{font-size:clamp(3rem,10vw,6rem);animation:heartbeat 1.8s ease-in-out infinite}@keyframes heartbeat{50%{transform:scale(1.12)}}.finale .primary{margin-top:15px}@media(max-width:520px){.envelope{height:250px}.env-paper{padding:16px 13px}.env-paper .type-letter{font-size:.85rem;line-height:1.7}.wax-seal{width:52px;height:52px}.garden{grid-template-columns:repeat(2,1fr)}.timeline:before{left:14px}.time-item{margin-left:38px}.time-item:before{left:-34px}}@media(prefers-reduced-motion:reduce){#cinematic-intro,.intro-orbs i,.intro-copy h1,.finale h2,.finale-heart{animation:none!important}.env-flap,.env-paper,.wax-seal{transition:none!important}}
+
+
+/* Love template gallery */
+.love-templates{margin:34px 0;padding:clamp(20px,4vw,34px);background:linear-gradient(135deg,#fffaf5,#ffeaf0);border:1px solid #f0d2dc;border-radius:26px;box-shadow:0 16px 40px #a85b7212}
+.template-intro{text-align:center;max-width:620px;margin:0 auto 22px}.template-intro .kicker{color:#b85e7c;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;font-weight:800}.template-intro h2{margin:8px 0;color:#8b425b;font-size:clamp(1.6rem,4vw,2.2rem)}.template-intro p{line-height:1.7}
+.template-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.love-template{border:1px solid #eed4dc;background:#fffdfb;border-radius:18px;padding:12px;text-align:center;transition:transform .2s,box-shadow .2s;min-width:0}.love-template:hover{transform:translateY(-4px);box-shadow:0 12px 25px #9b53651c}.template-art{height:125px;border-radius:13px;display:grid;place-items:center;font-size:2.5rem;margin-bottom:11px;position:relative;overflow:hidden}.template-art:after{content:"♡  ♡  ♡";position:absolute;bottom:8px;left:0;right:0;font-size:1rem;letter-spacing:.4em;opacity:.7}.template-art.rose{background:linear-gradient(145deg,#ffe1e8,#f7a8bd)}.template-art.night{background:linear-gradient(145deg,#29264e,#7b5a99);color:#fff}.template-art.sunset{background:linear-gradient(145deg,#ffdfbd,#f59b9f)}.template-art.garden{background:linear-gradient(145deg,#e5f4d8,#b7dfc1)}.love-template h3{font-size:1rem;margin:8px 0 5px}.love-template p{font-size:.82rem;line-height:1.5;min-height:49px;margin:0 0 12px}.template-use{border:0;border-radius:999px;padding:9px 12px;background:#a94e70;color:white;font-weight:700;font-size:.8rem;width:100%}.template-use[aria-pressed="true"]{background:#6e7f55}.template-preview{margin-top:20px;padding:18px;border-radius:17px;background:#fff;border:1px dashed #d8a6b6;text-align:center}.template-preview .preview-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#a85c78;font-weight:800}.template-preview h3{font-family:Georgia,serif;font-size:1.45rem;margin:8px 0;color:#9e4568}.template-preview p{line-height:1.7;margin:0 auto;max-width:580px}.template-preview .preview-sign{margin-top:10px;font-style:italic;color:#a85c78}
+@media(max-width:760px){.template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.template-art{height:105px}}
+@media(max-width:380px){.template-grid{grid-template-columns:1fr}.love-template p{min-height:0}}
+
+
+/* Accessibility and lightweight interaction polish */
+.header-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.love-counter{display:flex;flex-direction:column;gap:4px;align-items:center;margin:12px auto 0;max-width:520px;padding:12px 16px;border:1px solid #ead5d9;border-radius:14px;background:#fff8f5}
+.love-counter strong{font:1.15rem Georgia,serif;color:#b75c79}
+.love-counter span{font-size:.78rem;line-height:1.5;color:#765b5b}
+.gallery-open{display:block;width:100%;padding:0;border:0;background:transparent;border-radius:2px;color:inherit;font:inherit}
+.gallery-open:focus-visible{outline:3px solid #8a4964;outline-offset:4px}
+.gallery-open img{cursor:zoom-in}
+.gallery-lightbox{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(23,16,32,.92);color:#fff}
+.gallery-lightbox.open{display:flex}
+.gallery-lightbox figure{margin:0;max-width:min(92vw,850px);max-height:88vh;text-align:center}
+.gallery-lightbox img{display:block;max-width:100%;max-height:76vh;object-fit:contain;margin:auto;border-radius:8px;box-shadow:0 15px 50px #0007}
+.gallery-lightbox figcaption{padding:12px 48px 0;line-height:1.5}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;display:grid;place-items:center;min-width:44px;min-height:44px;border:1px solid #ffffff55;border-radius:50%;background:#ffffff18;color:#fff;font-size:1.4rem}
+.lightbox-close{right:16px;top:16px}.lightbox-prev{left:12px;top:50%;transform:translateY(-50%)}.lightbox-next{right:12px;top:50%;transform:translateY(-50%)}
+.music-tools{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:0 auto 20px;padding:14px;background:#fff8f5;border:1px solid #ead8cf;border-radius:14px;max-width:780px}
+.music-tools label{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.9rem;font-weight:700}
+.music-tools select{max-width:100%;min-height:44px;padding:8px 12px;border:1px solid #d9b8c1;border-radius:10px;background:#fff;color:#684b4b}
+.music-tools input{accent-color:var(--rose);width:120px;min-height:32px}
+#music-status{width:100%;margin:0;text-align:center;color:#856b6b;font-size:.8rem}
+.audio-play{min-width:44px;min-height:44px;flex-basis:44px}
+.audio-error{min-height:0;margin:4px 0 0;color:#9d334f;font-size:.78rem;line-height:1.4}
+.audio-error:not(:empty){min-height:1.1em}
+#cinematic-intro:focus{outline:none}
+#cinematic-intro[aria-hidden="true"]{visibility:hidden}
+#cinematic-intro.dismissed{visibility:hidden}
+#envelope-toggle{min-height:44px}
+@media(max-width:520px){.header-actions{width:100%;justify-content:center}.music-tools{align-items:stretch;flex-direction:column}.music-tools label{justify-content:space-between}.gallery-lightbox{padding:12px}.lightbox-prev{left:6px}.lightbox-next{right:6px}.gallery-lightbox figcaption{padding-left:30px;padding-right:30px}}
+@media(prefers-reduced-motion:reduce){.gallery-lightbox *,#love-sky{animation:none!important;transition:none!important}}
+.template-art.garden{display:grid;grid-template-columns:1fr;gap:0;max-width:none;margin:0 0 11px;min-height:0}
+.garden-flower{min-height:125px}
+.garden-flower:focus-visible{outline:3px solid #8a4964;outline-offset:3px}
+#typed-love-letter{white-space:pre-wrap;overflow-wrap:anywhere}
+.env-paper .type-letter{white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:520px){.envelope.opened{height:470px}.envelope.opened .env-paper{min-height:365px;padding:18px 14px}.envelope-stage{padding-left:6px;padding-right:6px}}
+
+
+
+/* Adorable bouquet corner decorations and interactive flower gifts */
+.floral-corner{position:fixed;z-index:0;pointer-events:none;font-size:clamp(2.1rem,4vw,3.8rem);opacity:.23;filter:drop-shadow(0 5px 8px #9b61751c);line-height:1}
+.floral-corner.left{left:8px;bottom:14px;transform:rotate(-13deg)}
+.floral-corner.right{right:8px;top:90px;transform:rotate(13deg)}
+#bouquet-garden{position:relative;isolation:isolate;margin:24px 0 40px;padding:clamp(22px,4vw,42px);border:1px solid #efd4dc;border-radius:28px;background:radial-gradient(ellipse at top left,#fff8f7 0%,#fffaf2 58%,#f6edf6 100%);box-shadow:0 18px 45px #81574a12;overflow:hidden}
+#bouquet-garden:before,#bouquet-garden:after{content:"✿ ❀ ✿";position:absolute;color:#d88da2;opacity:.19;font-size:2.4rem;letter-spacing:8px;pointer-events:none}
+#bouquet-garden:before{top:8px;left:10px;transform:rotate(-18deg)}
+#bouquet-garden:after{right:8px;bottom:7px;transform:rotate(165deg)}
+.bouquet-intro{text-align:center;max-width:680px;margin:0 auto 25px;position:relative;z-index:1}
+.bouquet-intro .kicker{color:#b55d7b;text-transform:uppercase;letter-spacing:.15em;font-size:.76rem;font-weight:700}
+.bouquet-intro h2{font:clamp(1.8rem,4vw,2.7rem) Georgia,serif;margin:9px 0;color:#805164}
+.bouquet-intro p{line-height:1.7;margin:0 auto;color:#856a70}
+.bouquet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;position:relative;z-index:1}
+.bouquet-card{background:#fffdfb;border:1px solid #f0dbe0;border-radius:20px;padding:17px 14px 18px;text-align:center;box-shadow:0 9px 22px #81574a0c;transition:transform .22s,box-shadow .22s;min-width:0}
+.bouquet-card:hover{transform:translateY(-4px) rotate(-.3deg);box-shadow:0 15px 28px #81574a16}
+.bouquet-art{height:160px;display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto 8px;max-width:230px;border-radius:16px;background:radial-gradient(ellipse at 50% 80%,#f7e3e7 0%,#fff7f5 52%,transparent 74%)}
+.bouquet-flowers{font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.05;letter-spacing:-.1em;filter:drop-shadow(0 4px 3px #a86a771c);transform:rotate(-4deg)}
+.bouquet-wrap{position:absolute;bottom:17px;left:50%;width:76px;height:62px;transform:translateX(-50%);background:linear-gradient(135deg,#e8b5c1,#f8dce1 55%,#d995a9);clip-path:polygon(7% 0,93% 0,67% 100%,33% 100%);opacity:.92}
+.bouquet-ribbon{position:absolute;bottom:37px;left:50%;transform:translateX(-50%);width:35px;height:12px;border-radius:9px;background:#a95a76;box-shadow:-10px 1px 0 -2px #c77c95,10px 1px 0 -2px #c77c95}
+.bouquet-card h3{font:1.25rem Georgia,serif;margin:10px 0 7px;color:#805164}
+.bouquet-card p{font-size:.93rem;line-height:1.55;margin:0 0 14px;color:#826b70}
+.bouquet-give{border:1px solid #e6bdca;background:#fff0f4;color:#854b62;border-radius:999px;padding:11px 15px;min-height:44px;font-weight:700;max-width:100%}
+.bouquet-give:hover{background:#f9dce5}
+.bouquet-note{display:none;margin:13px 0 0;padding:12px;border-radius:12px;background:#fff7f9;color:#795064;font:italic 1rem/1.55 Georgia,serif}
+.bouquet-card.revealed .bouquet-note{display:block;animation:bouquetReveal .35s ease-out}
+.bouquet-card.revealed .bouquet-give{background:#f3e6f0}
+@keyframes bouquetReveal{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.bouquet-grid{grid-template-columns:1fr;max-width:430px;margin:auto}.bouquet-card{display:grid;grid-template-columns:112px minmax(0,1fr);gap:0 13px;text-align:left;align-items:center;padding:13px}.bouquet-art{grid-row:1/5;width:112px;height:132px;margin:0}.bouquet-flowers{font-size:2rem}.bouquet-wrap{width:58px;height:50px;bottom:12px}.bouquet-ribbon{bottom:28px}.bouquet-card h3{font-size:1.08rem;margin:4px 0}.bouquet-card p{font-size:.86rem;margin:0 0 8px}.bouquet-give{justify-self:start;font-size:.86rem;padding:9px 12px}.bouquet-note{grid-column:1/-1}.floral-corner{opacity:.13}.floral-corner.right{top:75px}}
+@media(max-width:390px){.bouquet-card{grid-template-columns:90px minmax(0,1fr);gap:0 10px}.bouquet-art{width:90px;height:116px}.bouquet-flowers{font-size:1.75rem}.bouquet-card h3{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.bouquet-card,.bouquet-give{transition:none!important}.bouquet-card.revealed .bouquet-note{animation:none!important}}
+
+
+/* Blooming Romance upgrade: extra bouquet polish and gentle, low-cost floral motion */
+#bouquet-garden{overflow:hidden}
+.bouquet-vine{display:flex;justify-content:center;align-items:center;gap:clamp(12px,4vw,34px);margin:-8px auto 22px;color:#c77996;font-size:clamp(1.3rem,3vw,2rem);opacity:.72;position:relative;z-index:1;animation:vineSway 6s ease-in-out infinite alternate;transform-origin:center}
+.bouquet-vine span:nth-child(2),.bouquet-vine span:nth-child(4){color:#e6a2b6;font-size:1.25em}
+.bouquet-card{position:relative;overflow:hidden}
+.bouquet-card:before{content:'✧';position:absolute;right:12px;top:8px;color:#d99bb0;font-size:1.1rem;opacity:.65;pointer-events:none}
+.bouquet-art:after{content:'';position:absolute;inset:8px;border:1px solid #ffffff75;border-radius:13px;pointer-events:none}
+.bouquet-sparkle{position:absolute;top:16px;right:22px;color:#c77b98;font-size:1.3rem;animation:sparkleDrift 3.2s ease-in-out infinite}
+.bouquet-peony .bouquet-flowers{animation:bloomFloat 4.8s ease-in-out infinite}
+.bouquet-tulip .bouquet-flowers{animation:bloomFloat 5.4s ease-in-out infinite reverse}
+.bouquet-daisy .bouquet-flowers{animation:bloomFloat 4.4s ease-in-out infinite}
+.bouquet-card.revealed .bouquet-art{animation:bouquetGlow .8s ease-out}
+@keyframes vineSway{from{transform:translateX(-3px) rotate(-.5deg)}to{transform:translateX(3px) rotate(.5deg)}}
+@keyframes bloomFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(2deg)}}
+@keyframes sparkleDrift{0%,100%{opacity:.35;transform:translateY(0) rotate(0)}50%{opacity:1;transform:translateY(-5px) rotate(20deg)}}
+@keyframes bouquetGlow{50%{filter:drop-shadow(0 0 12px #e8a1ba88)}}
+.bouquet-petal{position:fixed;z-index:1200;pointer-events:none;left:0;top:0;font-size:18px;will-change:transform,opacity;animation:petalDrift 1.35s ease-out forwards}
+@keyframes petalDrift{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.5)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(1.1)}}
+@media(max-width:700px){.bouquet-vine{margin-top:0;margin-bottom:17px;gap:13px}.bouquet-card:before{right:7px;top:5px}.bouquet-sparkle{right:9px;top:8px}.bouquet-card.revealed .bouquet-art{animation:none}}
+@media(prefers-reduced-motion:reduce){.bouquet-vine,.bouquet-sparkle,.bouquet-flowers,.bouquet-card.revealed .bouquet-art{animation:none!important}.bouquet-petal{display:none!important}}
+
+
+/* Real-time couple chat */
+#love-chat{scroll-margin-top:20px}#love-chat [hidden]{display:none!important}.chat-shell{max-width:820px;margin:auto;border:1px solid #e9cbd4;border-radius:22px;overflow:hidden;background:#fffaf4;box-shadow:0 18px 45px #81574a18}.chat-top{padding:20px;background:linear-gradient(120deg,#f8dce5,#fff1e7);display:flex;align-items:center;gap:13px}.chat-avatar{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#fff9f2;font-size:1.5rem;border:1px solid #edcbd6}.chat-top h3{font:400 1.35rem Georgia,serif;margin:0 0 4px}.chat-status{font-size:.8rem;color:#9a6c78}.chat-status[data-state="online"]{color:#54835c}.chat-status[data-state="error"]{color:#b34f63}.chat-auth{padding:20px;display:grid;gap:12px}.chat-auth-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chat-input{width:100%;min-width:0;padding:12px 13px;border:1px solid #e6cbd0;border-radius:11px;background:#fffdf9;color:#684b4b;font:inherit}.chat-hint{font-size:.82rem;line-height:1.6;color:#92736b;margin:0}.chat-log{height:min(440px,55vh);min-height:240px;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:radial-gradient(ellipse at top,#fffaf5,#f8edf0)}.chat-empty{margin:auto;text-align:center;max-width:320px;color:#987783;line-height:1.7}.chat-message{max-width:85%;padding:10px 13px 8px;border-radius:16px;box-shadow:0 3px 10px #8054660c;overflow-wrap:anywhere;white-space:pre-wrap;line-height:1.55}.chat-message.mine{align-self:flex-end;background:#f4cbd8;border-bottom-right-radius:5px}.chat-message.theirs{align-self:flex-start;background:#fffdf7;border:1px solid #f0e1db;border-bottom-left-radius:5px}.chat-message .chat-sender{font-size:.72rem;font-weight:800;color:#a65b77;margin-bottom:3px}.chat-message .chat-time{font-size:.68rem;color:#987b82;text-align:right;margin-top:5px}.chat-compose{padding:14px;border-top:1px solid #efdae0;background:#fffaf5}.chat-emoji-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:9px}.chat-emoji{border:1px solid #efd6dc;border-radius:999px;background:#fff2f5;padding:5px 9px}.chat-compose-row{display:flex;align-items:flex-end;gap:9px}.chat-compose textarea{resize:vertical;min-height:46px;max-height:130px;flex:1}.chat-send{white-space:nowrap}.chat-compose textarea:disabled,.chat-compose button:disabled{opacity:.55;cursor:not-allowed}.chat-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 14px 14px;background:#fffaf5}.chat-signout{border:1px solid #e8cfd0;background:#fff9f1;border-radius:999px;padding:8px 12px;color:#684b4b}.chat-typing{min-height:20px;font-size:.78rem;color:#a36c78;padding:0 18px 8px;background:#f8edf0}.chat-unconfigured{border:1px dashed #d9a8b7;background:#fff4f4;padding:12px;border-radius:12px;color:#8b5364;line-height:1.65;font-size:.88rem}.chat-note{font-size:.8rem;color:#9a7d7c;line-height:1.6}
+@media(max-width:560px){.chat-auth-row{grid-template-columns:1fr}.chat-log{padding:12px;height:55vh}.chat-message{max-width:92%}.chat-top{padding:15px}.chat-compose{padding:10px}.chat-send{padding:12px}.chat-compose-row{gap:6px}}
+@media(prefers-reduced-motion:reduce){.chat-message{animation:none!important}}
+
+
+/* Claim-first ₹100 gift flow */
+.gift-claim-panel{max-width:650px;margin:22px auto 0;padding:20px;background:#fffdf8;border:1px solid #e9c8d1;border-radius:16px;text-align:left}
+.gift-claim-panel h3{font:1.35rem Georgia,serif;margin:0 0 9px;color:#805164}.gift-claim-panel p{line-height:1.65}
+.gift-claim-status{padding:12px;border-radius:10px;background:#fff2f5;color:#805164;line-height:1.6;margin:12px 0}
+.gift-claim-status[data-status="approved"]{background:#edf7e9;color:#426b43}.gift-claim-status[data-status="rejected"]{background:#fff0ed;color:#984d4d}.gift-claim-status[data-status="pending"]{background:#fff6df;color:#805f25}
+.gift-claim-actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.gift-claim-list{display:grid;gap:10px;margin-top:12px}
+.gift-claim-item{padding:13px;border:1px solid #ead8cb;border-radius:12px;background:#fffaf4}.gift-claim-item p{margin:5px 0;overflow-wrap:anywhere}.gift-claim-item button{margin:7px 6px 0 0}.gift-claim-muted{font-size:.82rem;color:#92736b}
+</style></head>
+<body><div class="paper-texture" aria-hidden="true"></div><div class="ribbon" aria-hidden="true"></div><div class="floral-corner left" aria-hidden="true">💐</div><div class="floral-corner right" aria-hidden="true">🌸</div>
+<div id="cinematic-intro" role="dialog" aria-modal="true" aria-hidden="false" aria-label="A little surprise for Sinia"><canvas id="intro-stars"></canvas><div class="intro-orbs"><i></i><i></i><i></i></div><div class="intro-copy"><div class="intro-overline">a little universe made for one person</div><h1>For Sinia</h1><p id="intro-type"></p><button class="intro-enter" id="enter-scrapbook">Open our little world ♡</button></div></div>
+<main class="wrap">
+<header class="topbar"><div class="brand">our little <b>♡</b> scrapbook</div><div class="header-actions"><button class="pill" id="sprinkle" type="button">✦ sprinkle petals</button><button class="pill" id="send-kiss" type="button" aria-label="Send Sinia a kiss">💋 send a kiss</button></div></header>
+<nav class="quick-links" aria-label="Scrapbook shortcuts"><a href="#love-templates">Love templates 💕</a><a href="#bouquet-garden">Flower bouquets 💐</a><a href="#surprise-gift">A surprise for you 🎁</a><a href="#starlit-world">Our universe 🌌</a><a href="#mini-games">Play together 🎮</a><a href="#playlist">Seven love songs ♫</a><a href="#love-chat">Love chat 💬</a></nav>
+<section class="hero" id="home"><span class="sticker">handmade with love · keepsake no. 01</span><div class="hero-art" aria-label="A cat and a bunny with a heart"><span>🐈</span><span>💗</span><span>🐇</span></div><h1>Sinia Techi<br><em>&</em> Santanu Doley</h1><p>A little scrapbook for our favorite story — pressed flowers, soft memories, tiny paws, and all the love that distance can't hold back.</p><div class="date">♡ &nbsp; SINCE APRIL 2023 &nbsp; ♡</div><div class="love-counter" aria-live="polite"><strong id="months-together">Since April 2023</strong><span>since April 2023 · month-based count, because we have not specified an exact day 💗</span></div><div class="actions"><button class="primary" onclick="document.querySelector('#letter-section').scrollIntoView({behavior:'smooth'})">read your little letter 💌</button><button class="secondary" onclick="document.querySelector('#playlist').scrollIntoView({behavior:'smooth'})">our soundtrack ♫</button></div><figure class="gif-memory"><div><img src="love-hearts-animation.gif" data-animated-src="love-hearts-animation.gif" data-still-src="love-hearts-animation-still.png" alt="Animated pink hearts and a cute bunny sending love"><figcaption class="gif-caption">sending you a thousand hugs ♡</figcaption></div></figure></section>
+
+<section class="love-templates" id="love-templates" aria-labelledby="templates-title">
+  <div class="template-intro"><div class="kicker">pick a little feeling</div><h2 id="templates-title">Love templates 💕</h2><p>Choose a tiny love-card style for your favorite person. Each one updates the preview below — a little new way to say “I love you,” from Santanu to Sinia.</p></div>
+  <div class="template-grid">
+    <article class="love-template"><div class="template-art rose">💌</div><h3>Sweet Love Letter</h3><p>Soft pinks, gentle words, and a note from the heart.</p><button class="template-use" data-template="letter" aria-pressed="false">Use this template ♡</button></article>
+    <article class="love-template"><div class="template-art night">🌙</div><h3>Under the Same Sky</h3><p>A dreamy midnight theme for two hearts, one universe.</p><button class="template-use" data-template="sky" aria-pressed="false">Use this template ♡</button></article>
+    <article class="love-template"><div class="template-art sunset">🌅</div><h3>Our Golden Hour</h3><p>A warm sunset style for memories that glow.</p><button class="template-use" data-template="sunset" aria-pressed="false">Use this template ♡</button></article>
+    <article class="love-template"><div class="template-art garden">🌷</div><h3>Forever in Bloom</h3><p>A fresh floral look for a love that keeps growing.</p><button class="template-use" data-template="garden" aria-pressed="false">Use this template ♡</button></article>
+  </div>
+  <div class="template-preview" id="template-preview" aria-live="polite"><div class="preview-label">your selected love card</div><h3>For my favorite person 💗</h3><p>Sinia, you make ordinary days feel softer and brighter. If I could give you one thing, it would be the chance to see yourself through my eyes — then you’d understand how special you are to me.</p><div class="preview-sign">Always yours, Santanu ♡</div></div>
+</section>
+
+<section id="flower-memory"><div class="section-head"><div class="kicker">clipped from a lovely day</div><h2>A little flower for our pages 🌼</h2><p>Some memories feel like a flower pressed between the pages of a favorite book — quiet, delicate, and worth keeping.</p></div><div class="photo-layout"><figure class="polaroid"><div class="tape"></div><img src="flower-memory.jpg" alt="The flower photo saved in our scrapbook" loading="lazy" decoding="async"><figcaption class="caption">a little piece of beauty ♡</figcaption></figure><div class="hand-note"><div class="scribble">Dear Sinia,</div><p>Like a flower tucked safely inside a book, the sweetest things can stay close even when they are far away. This little page is a reminder that you have a special place in my heart.</p><p style="text-align:right" class="scribble">— Santanu ♡</p></div></div></section>
+
+<section id="bouquet-garden" aria-labelledby="bouquet-title">
+  <div class="bouquet-vine" aria-hidden="true"><span>❧</span><span>✿</span><span>❀</span><span>✿</span><span>❧</span></div>
+  <div class="bouquet-intro"><div class="kicker">picked just for you · with love</div><h2 id="bouquet-title">A little flower shop for Sinia 💐</h2><p>If I could bring you flowers today, I would choose every color that reminds me of your smile. Tap a bouquet to unwrap its little note from Santanu.</p></div>
+  <div class="bouquet-grid">
+    <article class="bouquet-card"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌹🌹<br>🌷🌹🌷</div><div class="bouquet-wrap"></div><div class="bouquet-ribbon"></div></div><h3>Blush Rose Bouquet 🌹</h3><p>For the girl who makes my heart feel at home.</p><button class="bouquet-give" type="button" aria-expanded="false">Give these roses ♡</button><p class="bouquet-note" aria-live="polite">Sinia, every rose in this little bouquet stands for a reason I am grateful for you. If I were beside you, these would be in your hands with the biggest hug. — Santanu 💗</p></article>
+    <article class="bouquet-card"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌼🌸<br>🌻🌼🌸</div><div class="bouquet-wrap" style="background:linear-gradient(135deg,#c4d8a9,#edf0c9 55%,#9dbb85)"></div><div class="bouquet-ribbon" style="background:#78966a;box-shadow:-10px 1px 0 -2px #a1b98b,10px 1px 0 -2px #a1b98b"></div></div><h3>Sunshine Wildflowers 🌼</h3><p>For all the ordinary days you make brighter.</p><button class="bouquet-give" type="button" aria-expanded="false">Send sunshine 🌼</button><p class="bouquet-note" aria-live="polite">A pocketful of sunshine for you, my favorite person. On hard days, remember that you are loved, appreciated, and never need to be perfect to be precious to me. — Santanu ☀️</p></article>
+    <article class="bouquet-card"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌷🌷<br>🌷💮🌷</div><div class="bouquet-wrap" style="background:linear-gradient(135deg,#d7b7e7,#f0ddf5 55%,#b695d0)"></div><div class="bouquet-ribbon" style="background:#8c6aa6;box-shadow:-10px 1px 0 -2px #b79acb,10px 1px 0 -2px #b79acb"></div></div><h3>Lavender Dream 🌷</h3><p>For the soft, peaceful future I dream of with you.</p><button class="bouquet-give" type="button" aria-expanded="false">Unwrap a wish ✨</button><p class="bouquet-note" aria-live="polite">My wish is simple: more little laughs, honest talks, gentle patience, and new memories with you. Wherever life takes us, I hope we keep choosing kindness and each other. — Santanu 💜</p></article>
+    <article class="bouquet-card bouquet-peony"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌸🌺<br>🌸🌷🌸</div><div class="bouquet-wrap" style="background:linear-gradient(135deg,#f0a9bd,#ffe2e9 55%,#d982a0)"></div><div class="bouquet-ribbon" style="background:#b64f78;box-shadow:-10px 1px 0 -2px #d47c9a,10px 1px 0 -2px #d47c9a"></div><span class="bouquet-sparkle" aria-hidden="true">✧</span></div><h3>Peony Blush 💗</h3><p>For every little thing about you that makes life softer.</p><button class="bouquet-give" type="button" aria-expanded="false">Unwrap a peony ♡</button><p class="bouquet-note" aria-live="polite">Sinia, if I could, I would fill your day with pink peonies and remind you that you deserve gentleness, joy, and love that feels safe. You make my world bloom in the smallest ways. — Santanu 🌸</p></article>
+    <article class="bouquet-card bouquet-tulip"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌷🌷<br>🌷🌷🌷</div><div class="bouquet-wrap" style="background:linear-gradient(135deg,#f3c96e,#fff0bd 55%,#d6a94c)"></div><div class="bouquet-ribbon" style="background:#b88c3f;box-shadow:-10px 1px 0 -2px #d4b66e,10px 1px 0 -2px #d4b66e"></div><span class="bouquet-sparkle" aria-hidden="true">✧</span></div><h3>Golden Hour Tulips 🌷</h3><p>For the warm glow you bring to my ordinary days.</p><button class="bouquet-give" type="button" aria-expanded="false">Send golden tulips ☀️</button><p class="bouquet-note" aria-live="polite">You are like golden-hour sunlight after a long day: calm, warm, and worth slowing down for. I hope I keep finding new ways to make you smile, today and in all the tomorrows ahead. — Santanu 💛</p></article>
+    <article class="bouquet-card bouquet-daisy"><div class="bouquet-art" aria-hidden="true"><div class="bouquet-flowers">🌼🤍<br>🌼🌼🌼</div><div class="bouquet-wrap" style="background:linear-gradient(135deg,#c3d9b5,#edf4df 55%,#94b88b)"></div><div class="bouquet-ribbon" style="background:#64865d;box-shadow:-10px 1px 0 -2px #91b187,10px 1px 0 -2px #91b187"></div><span class="bouquet-sparkle" aria-hidden="true">✧</span></div><h3>Daisy Daydream 🤍</h3><p>For the honest, happy, little moments I want with you.</p><button class="bouquet-give" type="button" aria-expanded="false">Pick a daisy 🌼</button><p class="bouquet-note" aria-live="polite">A daisy for every laugh, every little memory, and every fresh start. We don't need a perfect story; I just hope we keep listening, learning, and choosing care for each other. — Santanu 🤍</p></article>
+  </div>
+</section>
+<section id="our-photos"><div class="section-head"><div class="kicker">little pieces of us</div><h2>Our photo corner 📸</h2><p>Three little snapshots, saved here so they can stay close to our story.</p></div><div class="photo-gallery">
+<figure class="gallery-item"><button class="gallery-open" type="button" aria-label="View Sinia’s photo"><img src="sinia-photo.jpg" alt="Sinia’s photo" loading="lazy" decoding="async"></button><figcaption>Sinia ♡ · a little smile I want to keep</figcaption></figure>
+<figure class="gallery-item"><button class="gallery-open" type="button" aria-label="View Santanu holding a red rose"><img src="santanu-rose.png" alt="Santanu holding a red rose" loading="lazy" decoding="async"></button><figcaption>A rose for you 🌹</figcaption></figure>
+<figure class="gallery-item"><button class="gallery-open" type="button" aria-label="View Santanu’s silly photo"><img src="santanu-silly.jpg" alt="Santanu making a silly face" loading="lazy" decoding="async"></button><figcaption>Your silly boy ♡</figcaption></figure>
+</div></section>
+<section><div class="section-head"><div class="kicker">our keepsake pages</div><h2>Tiny moments, forever tucked away</h2><p>A few little reminders for the story that started in April 2023 and keeps growing.</p></div><div class="grid3"><article class="scrap-card"><div class="emoji">🐾</div><h3>Our first pages</h3><p>April 2023 — the beginning of a story still being written, one kind word and one smile at a time.</p></article><article class="scrap-card"><div class="emoji">🌷</div><h3>Soft things matter</h3><p>Gentleness, laughter, honest words, and the little things that make an ordinary day feel special.</p></article><article class="scrap-card"><div class="emoji">🐈‍⬛ ♡ 🐇</div><h3>Same sky, same heart</h3><p>Like a cat and a bunny finding a cozy spot together, may we always make room for comfort and care.</p></article></div></section>
+<section><div class="quote-paper"><div class="heart">♡</div><blockquote>“No matter the distance, you have a special place in my heart.”</blockquote><cite>For Sinia, with love from Santanu</cite><img class="quote-gif" src="sinia-santanu-love-animation.gif" data-animated-src="sinia-santanu-love-animation.gif" data-still-src="sinia-santanu-love-animation-still.png" alt="Animated pink love scrapbook for Sinia and Santanu, since April 2023"><p class="gif-note">a tiny animated keepsake, just for you 💗</p></div></section>
+
+<section id="surprise-gift" class="premium-section">
+ <div class="wrap"><div class="section-head"><div class="kicker">a little secret, just for you</div><h2>🎁 Your surprise gift</h2><p>Sinia, tap the gift to unwrap a tiny piece of Santanu's heart.</p></div>
+ <div class="gift-stage"><button class="gift-box" id="gift-box" type="button" aria-label="Open surprise gift" aria-expanded="false" aria-controls="gift-message"><span class="gift-lid"></span><span class="gift-base"></span><span class="gift-ribbon-v"></span><span class="gift-bow"></span></button><p><strong>One little box. A thousand feelings. ♡</strong></p><button class="primary" id="open-gift" type="button" aria-expanded="false" aria-controls="gift-message">Open your gift ✨</button>
+ <div class="gift-message" id="gift-message" aria-live="polite"><div style="font-size:2rem">💌 🌷 🐈 🐇</div><div class="scribble">Dear Sinia,</div><p>If I could wrap up one feeling and give it to you, it would be the comfort of knowing you are loved, appreciated, and never ordinary to me.</p><p>From April 2023 to every little chapter still ahead, you're one of my favourite parts of this story.</p><p><strong>Forever your teammate in this little world, — Santanu ♡</strong></p><button class="secondary" id="close-gift" type="button">Fold the note away</button></div>
+  <div class="gift-claim-panel" id="gift-claim-panel"><h3>💝 Claim your ₹100 gift</h3><p>Sinia, submit a gift claim here for Santanu to review. If approved, he will manually send ₹100 via UPI. Approval does not mean payment has been sent.</p><div id="gift-claim-status" class="gift-claim-status" aria-live="polite">Sign in to the Love Chat below to claim or review the gift.</div><div class="gift-claim-actions"><button class="primary" id="claim-gift-button" type="button" disabled>Claim my ₹100 gift 💗</button></div><p class="gift-claim-muted">Sign in with the authorized Firebase account. Your claim status is stored in Firestore.</p><div id="gift-admin-panel" hidden><hr style="border:0;border-top:1px solid #ead8cb;margin:18px 0"><h3>🔐 Santanu's claim approvals</h3><p class="gift-claim-muted">Review claims below. Approval only changes claim status; send money separately via UPI.</p><div id="gift-claim-list" class="gift-claim-list"><p class="gift-claim-muted">Loading claims…</p></div></div></div></div>
+</section>
+<section id="starlit-world" class="premium-section"><div class="wrap"><div class="section-head"><div class="kicker">our own little universe</div><h2>🌌 Our little starlit world</h2><p>Twinkling stars and floating hearts, made just for the two of you — lightweight, local, and gentle on your phone.</p></div>
+ <div class="sky-wrap"><canvas id="love-sky" aria-label="Decorative star field with floating hearts"></canvas><div class="sky-caption">Somewhere in this huge universe, I'm glad it's you. ♡</div></div><p class="premium-note" style="text-align:center;margin-top:12px">This little sky runs locally without external JavaScript libraries. Your photos, GIFs, and seven included MP3s stay inside this scrapbook.</p>
+</div></section>
+<section id="mini-games" class="premium-section"><div class="wrap"><div class="section-head"><div class="kicker">play a little, smile a lot</div><h2>🎮 Our tiny arcade</h2><p>Two little games for a tiny break together. Your score stays on this page.</p></div>
+<div class="game-grid">
+ <div class="game-card"><div style="font-size:2rem">💗</div><h3>Catch the Love</h3><p>Tap the moving heart as many times as you can in 20 seconds!</p><div class="game-stats" id="catch-stats">Score: 0 · Time: 20s</div><div class="heart-arena" id="heart-arena"><button class="catch-heart" id="catch-heart" type="button" aria-label="Catch the heart">💖</button></div><button class="primary" id="start-catch" type="button">Start game</button><p class="premium-note" id="catch-result" aria-live="polite">Ready, sweetheart?</p></div>
+ <div class="game-card"><div style="font-size:2rem">🐈 🐇</div><h3>Memory Match</h3><p>Find all the matching pairs. Can you remember where they hide?</p><div class="game-stats" id="memory-stats">Moves: 0 · Pairs: 0/8</div><div class="memory-board" id="memory-board" aria-label="Memory matching game"></div><button class="secondary" id="reset-memory" type="button">Shuffle cards ↻</button><p class="premium-note" id="memory-result" aria-live="polite">Match all eight pairs!</p></div>
+</div></div></section>
+
+<section id="playlist"><div class="section-head"><div class="kicker">music pressed between the pages</div><h2>Our little soundtrack 🎧</h2><p>Pick a song, settle in, and let it be the background music to our tiny universe.</p></div><div class="music-tools"><label for="song-selector">Choose a song <select id="song-selector"><option value="">Choose a track…</option></select></label><label for="shared-volume">Volume <input id="shared-volume" type="range" min="0" max="1" step="0.05" value="0.8"></label><p id="music-status" aria-live="polite">Choosing a song will take you to its player; it will not start automatically.</p></div><div class="playlist">
+<article class="track"><div class="track-head"><span class="track-icon">🌊</span><div><small>01 · FLOATING FEELINGS</small><h3>Cloud 9</h3><p>Beach Bunny</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="cloud-9.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Cloud 9">▶</button><div class="audio-meta"><strong>Cloud 9</strong><div class="audio-caption">A little song for floating feelings ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Cloud 9"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article>
+<article class="track"><div class="track-head"><span class="track-icon">🌹</span><div><small>02 · TIMELESS ROMANCE</small><h3>Young and Beautiful</h3><p>Lana Del Rey</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="young-and-beautiful.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Young and Beautiful">▶</button><div class="audio-meta"><strong>Young and Beautiful</strong><div class="audio-caption">For a timeless kind of love ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Young and Beautiful"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article>
+<article class="track"><div class="track-head"><span class="track-icon">💙</span><div><small>03 · OUR SKY, OUR SONG</small><h3>blue</h3><p>yung kai</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="blue.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play blue">▶</button><div class="audio-meta"><strong>blue</strong><div class="audio-caption">Our sky, our song 💙</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek blue"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article><article class="track"><div class="track-head"><span class="track-icon">🏖️</span><div><small>04 · SOFT DAYS</small><h3>Beaches</h3><p>beabadoobee</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="beaches.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Beaches">▶</button><div class="audio-meta"><strong>Beaches</strong><div class="audio-caption">A little beach-day feeling ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Beaches"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article><article class="track"><div class="track-head"><span class="track-icon">🍒</span><div><small>05 · PLAYFUL ROMANCE</small><h3>Diet Mountain Dew</h3><p>Lana Del Rey</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="diet-mountain-dew.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Diet Mountain Dew">▶</button><div class="audio-meta"><strong>Diet Mountain Dew</strong><div class="audio-caption">A playful little soundtrack ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Diet Mountain Dew"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article><article class="track"><div class="track-head"><span class="track-icon">🌷</span><div><small>06 · GENTLE HEART</small><h3>Cinnamon Girl</h3><p>Lana Del Rey</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="cinnamon-girl.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Cinnamon Girl">▶</button><div class="audio-meta"><strong>Cinnamon Girl</strong><div class="audio-caption">For the softer moments ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Cinnamon Girl"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></article><article class="track"><div class="track-head"><span class="track-icon">⛵</span><div><small>07 · OUR LITTLE WORLD</small><h3>Sailor Song</h3><p>Gigi Perez</p></div></div><div class="audio-player"><audio class="song" preload="metadata" src="sailor-song.mp3"></audio><p class="audio-error" aria-live="polite"></p><div class="audio-controls"><button class="audio-play" type="button" aria-label="Play Sailor Song">▶</button><div class="audio-meta"><strong>Sailor Song</strong><div class="audio-caption">A song for our own little world ♡</div></div></div><input class="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek Sailor Song"><div class="audio-time"><span class="current">0:00</span><span class="duration">0:00</span></div></div></div><p class="music-note">🎀 MP3s are included with this scrapbook, so the songs can play offline. Press play on a song; starting another pauses the previous one.</p></section>
+<section id="letter-section"><div class="section-head"><div class="kicker">sealed with a ribbon</div><h2>A letter, just for you 💌</h2><p>There's a tiny handwritten-style note tucked into this page. Open it whenever you need a smile.</p></div><div class="letter-wrap"><button class="primary" id="open-letter">untie the pink ribbon 🎀</button><div class="letter" id="secret-letter"><div class="scribble">Dear Sinia,</div><p>If I could send you one thing through the distance, it would be a little reminder that you matter so much. I hope this tiny corner makes you smile, today and on the days you need it most.</p><p>Here's to our story, from April 2023 and all the chapters still to come. May we keep choosing kindness, making room for laughter, and collecting small memories worth keeping.</p><p class="sign">Always cheering for us,<br>— Santanu ♡</p><div style="text-align:right">🐈 💗 🐇</div></div></div></section>
+
+<section id="interactive-envelope"><div class="section-head"><div class="kicker">a letter hidden in a little envelope</div><h2>Open this when you miss me 💌</h2><p>Tap the envelope to break the wax seal and unfold a note written just for you.</p></div><div class="envelope-stage"><div class="envelope" id="love-envelope" role="button" tabindex="0" aria-label="Open Santanu's letter to Sinia" aria-expanded="false" aria-controls="typed-love-letter"><div class="env-back"></div><div class="env-paper"><div class="type-letter" id="typed-love-letter"></div><span class="env-sign" id="env-sign"></span></div><div class="env-flap"></div><div class="env-pocket"></div><div class="wax-seal">♥</div></div><button class="primary" id="envelope-toggle">Break the seal 💌</button><p class="env-hint" id="envelope-hint">A tiny letter, sealed with love and a little stardust.</p></div></section>
+<section id="our-timeline"><div class="section-head"><div class="kicker">chapters of us</div><h2>Our little timeline 🕰️</h2><p>From the first page in April 2023 to every chapter still waiting to be written.</p></div><div class="timeline"><article class="time-item"><small>APRIL 2023 · CHAPTER ONE</small><h3>The beginning of our story 🌷</h3><p>The month our story began. A little hello that became a collection of memories, smiles, and reasons to care.</p></article><article class="time-item"><small>EVERY LITTLE DAY · CHAPTER TWO</small><h3>Small moments, big feelings 💗</h3><p>Every conversation, silly joke, kind word, and little check-in adds another pressed flower to our scrapbook.</p></article><article class="time-item"><small>RIGHT NOW · CHAPTER THREE</small><h3>Still choosing our story ✨</h3><p>This page is a keepsake of today, with room for new memories whenever life gives us another lovely moment.</p></article><article class="time-item"><small>THE FUTURE · TO BE WRITTEN</small><h3>So many pages left 📖</h3><p>No need to know every chapter yet. We can keep writing gently, honestly, and one page at a time.</p></article></div></section>
+<section id="100-reasons"><div class="section-head"><div class="kicker">one hundred tiny reminders</div><h2>100 reasons I adore you ❤️</h2><p>One at a time, like little notes tucked into your pocket. Tap next to turn the page.</p></div><div class="reasons-wrap"><div class="reason-number" id="reason-number">REASON 01 OF 100</div><div class="reason-text" id="reason-text" aria-live="polite">Your smile can make an ordinary day feel softer.</div><div class="actions"><button class="secondary" id="reason-prev">← Previous</button><button class="primary" id="reason-next">Another reason ♡ →</button></div></div></section>
+<section id="memory-garden"><div class="section-head"><div class="kicker">little things that keep growing</div><h2>Our memory garden 🌸</h2><p>Tap a flower to uncover a little reminder. Every bloom stands for a feeling worth keeping.</p></div><div class="garden" id="memory-garden-grid"><button class="garden-flower"><span>🌷</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌼</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌸</span><small>tap to bloom</small></button><button class="garden-flower"><span>🪻</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌺</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌻</span><small>tap to bloom</small></button><button class="garden-flower"><span>🍀</span><small>tap to bloom</small></button><button class="garden-flower"><span>💐</span><small>tap to bloom</small></button></div></section>
+<section id="grand-finale"><div class="finale"><div class="finale-heart">💗</div><div class="kicker" style="color:#ffc0d7">one last page, for now</div><h2>Hey, Sinia…</h2><p>If this little scrapbook could give you one thing, I hope it gives you a smile and reminds you that you're a beautiful part of my story. From April 2023 onward, may there always be more kind words, tiny adventures, and pages worth keeping.</p><p class="handwriting" style="font-size:1.5rem;color:#ffc0d7">With all my love, — Santanu ♡</p><div class="finale-actions"><button class="primary" id="finale-sparkles" type="button">Make the sky sparkle ✨</button> <button class="secondary" id="replay-story" type="button">Replay our story ↺</button></div></div></section>
+
+<section id="love-chat" aria-labelledby="chat-title">
+  <div class="section-head"><div class="kicker">a little space just for us</div><h2 id="chat-title">Our Love Chat 💬</h2><p>For the little things, the long days, the random songs, and the moments when you just want to say “hey, I miss you.” Messages sync between our phones when the chat is configured online.</p></div>
+  <div class="chat-shell">
+    <div class="chat-top"><div class="chat-avatar" aria-hidden="true">🐈‍⬛💗🐇</div><div><h3>Sinia &amp; Santanu</h3><div id="chat-status" class="chat-status" data-state="idle" aria-live="polite">Not connected yet</div></div></div>
+    <div id="chat-config-warning" class="chat-auth"><div class="chat-unconfigured">💌 <strong>One-time setup needed.</strong> This chat uses Firebase for secure sign-in and live message sync. Configure <code>firebase-config.js</code>, create both accounts, and apply <code>firestore.rules</code> using the included <code>CHAT_SETUP.txt</code> guide. Until then, messages will not be sent or stored online.</div></div>
+    <div id="chat-auth" class="chat-auth" hidden>
+      <div class="chat-auth-row"><input id="chat-email" class="chat-input" type="email" autocomplete="username" placeholder="Your sign-in email" aria-label="Sign-in email"><input id="chat-password" class="chat-input" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password"></div>
+      <button id="chat-login" class="primary" type="button">Sign in to our chat ♡</button>
+      <p class="chat-hint">Only the two email addresses allowed in the Firestore rules can read or send messages. Accounts are created in the Firebase Console, not on this page.</p>
+      <p id="chat-auth-error" class="chat-hint" role="alert"></p>
+    </div>
+    <div id="chat-live" hidden>
+      <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions text"><div class="chat-empty">🌷 Loading our little conversation…</div></div>
+      <div id="chat-typing" class="chat-typing" aria-live="polite"></div>
+      <div class="chat-compose"><div class="chat-emoji-row" aria-label="Quick emojis"><button type="button" class="chat-emoji" data-emoji="❤️">❤️</button><button type="button" class="chat-emoji" data-emoji="🥹">🥹</button><button type="button" class="chat-emoji" data-emoji="😘">😘</button><button type="button" class="chat-emoji" data-emoji="🌷">🌷</button><button type="button" class="chat-emoji" data-emoji="🫶">🫶</button><button type="button" class="chat-emoji" data-emoji="🐈‍⬛🐇">🐈‍⬛🐇</button></div><div class="chat-compose-row"><textarea id="chat-message" class="chat-input" maxlength="1000" rows="2" placeholder="Write something sweet…" aria-label="Message" disabled></textarea><button id="chat-send" class="primary chat-send" type="button" disabled>Send ♡</button></div></div>
+      <div class="chat-foot"><span class="chat-note">Be kind to each other. Messages are shared with the two authorized accounts.</span><button id="chat-signout" class="chat-signout" type="button">Sign out</button></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-critters">🐈‍⬛ ✿ 🐇 ✿ 🐈</div><div>made with paper, petals & a little stardust</div><div style="margin-top:8px">Sinia Techi ♡ Santanu Doley · April 2023 and onward</div></footer>
+</main>
+<script>
+const reduceMotion=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+function applyGifMotionPreference(){document.querySelectorAll('img[data-animated-src][data-still-src]').forEach(img=>{const wanted=reduceMotion.matches?img.dataset.stillSrc:img.dataset.animatedSrc;if(img.getAttribute('src')!==wanted)img.setAttribute('src',wanted);});}
+applyGifMotionPreference();
+if(reduceMotion.addEventListener)reduceMotion.addEventListener('change',applyGifMotionPreference);
+
+
+(function updateMonthCounter(){
+ const out=document.getElementById('months-together');if(!out)return;
+ const now=new Date(),months=Math.max(0,(now.getFullYear()-2023)*12+(now.getMonth()-3));
+ out.textContent=months+' calendar month'+(months===1?'':'s');
+})();
+
+const symbols=['✿','♡','✧','🌸','💗','🐾','💋'];
+function petals(n=18){if(reduceMotion.matches)return;for(let i=0;i<n;i++){const s=document.createElement('span');s.textContent=symbols[Math.floor(Math.random()*symbols.length)];Object.assign(s.style,{position:'fixed',left:(Math.random()*100)+'vw',top:'-30px',zIndex:'99',pointerEvents:'none',fontSize:(14+Math.random()*18)+'px',color:'#d76b87',transition:'transform 4s linear, opacity 4s linear',opacity:'1'});document.body.appendChild(s);requestAnimationFrame(()=>{s.style.transform=`translateY(${window.innerHeight+80}px) rotate(${Math.random()*500-250}deg)`;s.style.opacity='0'});setTimeout(()=>s.remove(),4200)}}
+document.getElementById('sprinkle').addEventListener('click',()=>petals(26));
+let kissToastTimer=0;
+document.getElementById('send-kiss').addEventListener('click',()=>{
+ let toast=document.getElementById('kiss-toast');
+ if(!toast){toast=document.createElement('div');toast.id='kiss-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');toast.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1500;max-width:calc(100vw - 28px);padding:13px 18px;border-radius:999px;background:#fff8f5;border:1px solid #e8b9c8;box-shadow:0 8px 30px #58334825;color:#684b4b;text-align:center;font-weight:700';document.body.appendChild(toast);}
+ toast.textContent='💋 A little kiss sent to Sinia, with love from Santanu! 💗';
+ clearTimeout(kissToastTimer);kissToastTimer=setTimeout(()=>toast.remove(),3200);
+ if(!reduceMotion.matches)petals(12);
+});
+
+
+const players=[...document.querySelectorAll('.track')];
+const songSelector=document.getElementById('song-selector');
+const sharedVolume=document.getElementById('shared-volume');
+const musicStatus=document.getElementById('music-status');
+function timeLabel(seconds){if(!Number.isFinite(seconds)||seconds<0)return '0:00';const m=Math.floor(seconds/60),s=Math.floor(seconds%60);return `${m}:${String(s).padStart(2,'0')}`}
+players.forEach((card,index)=>{
+ const audio=card.querySelector('.song'),btn=card.querySelector('.audio-play'),seek=card.querySelector('.seek'),cur=card.querySelector('.current'),dur=card.querySelector('.duration'),error=card.querySelector('.audio-error'),title=card.querySelector('h3').textContent;
+ const option=document.createElement('option');option.value=String(index);option.textContent=title;songSelector.appendChild(option);
+ audio.volume=Number(sharedVolume.value);
+ const sync=()=>{cur.textContent=timeLabel(audio.currentTime);seek.value=audio.duration?audio.currentTime/audio.duration*100:0};
+ audio.addEventListener('loadedmetadata',()=>{dur.textContent=timeLabel(audio.duration);sync();error.textContent=''});
+ audio.addEventListener('timeupdate',sync);
+ audio.addEventListener('play',()=>{
+   error.textContent='';
+   players.forEach(other=>{if(other!==card){const a=other.querySelector('.song');a.pause();other.querySelector('.audio-play').textContent='▶';other.querySelector('.audio-play').setAttribute('aria-label','Play '+other.querySelector('h3').textContent)}});
+   btn.textContent='Ⅱ';btn.setAttribute('aria-label','Pause '+title);
+   songSelector.value=String(index);musicStatus.textContent='Now playing: '+title;
+ });
+ audio.addEventListener('pause',()=>{btn.textContent='▶';btn.setAttribute('aria-label','Play '+title)});
+ audio.addEventListener('ended',()=>{btn.textContent='▶';seek.value=0;audio.currentTime=0;musicStatus.textContent='Finished: '+title+'. Choose another song whenever you like.'});
+ audio.addEventListener('error',()=>{error.textContent='This track could not be loaded. Check that the ZIP was fully extracted and the audio file is present.';musicStatus.textContent='Unable to load '+title+'.'});
+ btn.addEventListener('click',()=>{
+   if(audio.paused){error.textContent='';const result=audio.play();if(result&&typeof result.catch==='function')result.catch(()=>{btn.textContent='▶';error.textContent='Playback failed. Try again after checking the audio file and browser permissions.';musicStatus.textContent='Could not play '+title+'.';});}
+   else audio.pause();
+ });
+ seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(seek.value)/100*audio.duration});
+});
+songSelector.addEventListener('change',()=>{
+ const index=Number(songSelector.value);
+ if(songSelector.value===''||!players[index])return;
+ const title=players[index].querySelector('h3').textContent;
+ players[index].scrollIntoView({behavior:reduceMotion.matches?'auto':'smooth',block:'center'});
+ players[index].querySelector('.audio-play').focus({preventScroll:true});
+ musicStatus.textContent='Selected '+title+'. Press its Play button when you are ready.';
+});
+sharedVolume.addEventListener('input',()=>{players.forEach(card=>{card.querySelector('.song').volume=Number(sharedVolume.value)});});
+document.getElementById('open-letter').addEventListener('click',()=>{const el=document.getElementById('secret-letter');el.classList.toggle('open');document.getElementById('open-letter').textContent=el.classList.contains('open')?'tie the ribbon again 🎀':'untie the pink ribbon 🎀'});
+
+// Surprise gift box
+const giftBox=document.getElementById('gift-box'),giftMessage=document.getElementById('gift-message');
+function toggleGift(open){giftBox.classList.toggle('opened',open);giftMessage.classList.toggle('show',open);giftBox.setAttribute('aria-expanded',String(open));document.getElementById('open-gift').setAttribute('aria-expanded',String(open));document.getElementById('open-gift').textContent=open?'Gift opened with love 💗':'Open your gift ✨';}
+giftBox.addEventListener('click',()=>toggleGift(!giftMessage.classList.contains('show')));
+document.getElementById('open-gift').addEventListener('click',()=>toggleGift(!giftMessage.classList.contains('show')));
+document.getElementById('close-gift').addEventListener('click',()=>toggleGift(false));
+
+// Catch the Love game: deliberately timer-free until the player starts.
+const arena=document.getElementById('heart-arena'),catchHeart=document.getElementById('catch-heart');
+let catchScore=0,catchTime=20,catchTimer=null,catchActive=false;
+function moveCatchHeart(){const maxX=Math.max(0,arena.clientWidth-42),maxY=Math.max(0,arena.clientHeight-45);catchHeart.style.left=Math.round(Math.random()*maxX)+'px';catchHeart.style.top=Math.round(Math.random()*maxY)+'px';}
+catchHeart.addEventListener('click',()=>{if(!catchActive)return;catchScore++;document.getElementById('catch-stats').textContent=`Score: ${catchScore} · Time: ${catchTime}s`;moveCatchHeart();if(!reduceMotion.matches&&typeof catchHeart.animate==='function')catchHeart.animate([{transform:'scale(.6) rotate(-18deg)'},{transform:'scale(1) rotate(0deg)'}],{duration:250});});
+document.getElementById('start-catch').addEventListener('click',()=>{clearInterval(catchTimer);catchScore=0;catchTime=20;catchActive=true;document.getElementById('catch-result').textContent='Catch as many hearts as you can!';document.getElementById('start-catch').textContent='Playing…';document.getElementById('catch-stats').textContent=`Score: 0 · Time: 20s`;moveCatchHeart();catchTimer=setInterval(()=>{catchTime--;document.getElementById('catch-stats').textContent=`Score: ${catchScore} · Time: ${catchTime}s`;if(catchTime<=0){clearInterval(catchTimer);catchActive=false;document.getElementById('start-catch').textContent='Play again';document.getElementById('catch-result').textContent=`You caught ${catchScore} hearts! Sending you ${catchScore} kisses 💋`;}},1000);});
+
+// Memory Match
+const memoryIcons=['🐈','🐈','🐇','🐇','💗','💗','🌷','🌷','🌙','🌙','⭐','⭐','🦋','🦋','🍓','🍓'];
+let memoryFirst=null,memoryLock=false,memoryMoves=0,memoryPairs=0,memoryMatches=new Set(),memoryTurn=0;
+function buildMemory(){const board=document.getElementById('memory-board');board.innerHTML='';memoryFirst=null;memoryLock=false;memoryMoves=0;memoryPairs=0;memoryMatches=new Set();memoryTurn++;const deck=[...memoryIcons].sort(()=>Math.random()-.5);document.getElementById('memory-stats').textContent='Moves: 0 · Pairs: 0/8';document.getElementById('memory-result').textContent='Match all eight pairs!';deck.forEach((icon,i)=>{const b=document.createElement('button');b.type='button';b.className='memory-tile';b.textContent='?';b.setAttribute('aria-label','Hidden card');b.dataset.icon=icon;b.dataset.index=i;b.addEventListener('click',()=>{if(memoryLock||memoryMatches.has(i)||b.classList.contains('flipped'))return;b.textContent=icon;b.classList.add('flipped');b.setAttribute('aria-label',icon);if(!memoryFirst){memoryFirst=b;return;}memoryMoves++;const first=memoryFirst;memoryFirst=null;if(first.dataset.icon===b.dataset.icon){memoryMatches.add(Number(first.dataset.index));memoryMatches.add(i);first.classList.add('matched');b.classList.add('matched');memoryPairs++;document.getElementById('memory-result').textContent=memoryPairs===8?'Perfect match! Made with love. 💞':'A match! Keep going 💗';}else{memoryLock=true;const turn=memoryTurn;setTimeout(()=>{if(turn!==memoryTurn)return;first.textContent='?';b.textContent='?';first.classList.remove('flipped');b.classList.remove('flipped');first.setAttribute('aria-label','Hidden card');b.setAttribute('aria-label','Hidden card');memoryLock=false;},750);}document.getElementById('memory-stats').textContent=`Moves: ${memoryMoves} · Pairs: ${memoryPairs}/8`;});board.appendChild(b);});}
+document.getElementById('reset-memory').addEventListener('click',buildMemory);buildMemory();
+
+
+// Local, dependency-free starfield. Rendering pauses when reduced motion is requested,
+// the tab is hidden, or the canvas is outside the viewport.
+(function initLoveSky(){
+ const canvas=document.getElementById('love-sky');if(!canvas)return;
+ const ctx=canvas.getContext('2d');if(!ctx)return;
+ const stars=Array.from({length:150},()=>({x:Math.random(),y:Math.random(),r:.4+Math.random()*1.4,a:.25+Math.random()*.65,phase:Math.random()*6}));
+ let width=0,height=0,raf=0,active=false,last=0;
+ function resize(){const rect=canvas.getBoundingClientRect();width=Math.max(1,rect.width);height=Math.max(1,rect.height);const dpr=Math.min(window.devicePixelRatio||1,1.5);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw(0);}
+ function draw(time){ctx.clearRect(0,0,width,height);const reduced=reduceMotion.matches;stars.forEach((s,i)=>{const twinkle=reduced?1:(.72+.28*Math.sin(time*.001+s.phase));ctx.fillStyle=`rgba(255,225,242,${s.a*twinkle})`;ctx.beginPath();ctx.arc(s.x*width,s.y*height,s.r,0,Math.PI*2);ctx.fill();});ctx.font='24px Georgia,serif';['♡','✦','♡','✧'].forEach((s,i)=>{ctx.fillStyle=i%2?'#d8c4ff':'#ffd7e8';ctx.fillText(s,width*(.15+i*.22),height*(.32+(i%2)*.28));});}
+ function tick(time){if(!active||document.hidden||reduceMotion.matches){raf=0;return;}if(time-last>40){draw(time);last=time;}raf=requestAnimationFrame(tick);}
+ function start(){if(active||reduceMotion.matches||document.hidden)return;active=true;if(!raf)raf=requestAnimationFrame(tick);}
+ function stop(){active=false;if(raf)cancelAnimationFrame(raf);raf=0;}
+ const observer=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{if(entries[0].isIntersecting)start();else stop();},{threshold:.05}):null;
+ if(observer)observer.observe(canvas);else start();
+ window.addEventListener('resize',resize,{passive:true});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else if(!observer||canvas.getBoundingClientRect().bottom>0&&canvas.getBoundingClientRect().top<innerHeight)start();});
+ if(reduceMotion.addEventListener)reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches){stop();draw(0);}else start();});
+ resize();
+})();
+
+// Accessible photo lightbox: keyboard-operable, focus returns to the triggering photo.
+(function initGalleryLightbox(){
+ const buttons=[...document.querySelectorAll('.gallery-open')];if(!buttons.length)return;
+ const modal=document.createElement('div');modal.className='gallery-lightbox';modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-label','Photo viewer');
+ modal.innerHTML='<button class="lightbox-close" type="button" aria-label="Close photo viewer">×</button><button class="lightbox-prev" type="button" aria-label="Previous photo">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightbox-next" type="button" aria-label="Next photo">›</button>';
+ document.body.appendChild(modal);
+ const image=modal.querySelector('img'),caption=modal.querySelector('figcaption'),closeBtn=modal.querySelector('.lightbox-close'),prev=modal.querySelector('.lightbox-prev'),next=modal.querySelector('.lightbox-next');
+ let index=0,trigger=null;
+ function show(i){index=(i+buttons.length)%buttons.length;const source=buttons[index].querySelector('img');image.src=source.currentSrc||source.src;image.alt=source.alt;caption.textContent=source.alt;prev.hidden=buttons.length<2;next.hidden=buttons.length<2;}
+ function open(i){trigger=buttons[i];show(i);modal.classList.add('open');document.body.style.overflow='hidden';closeBtn.focus();}
+ function close(){modal.classList.remove('open');document.body.style.overflow='';image.removeAttribute('src');if(trigger)trigger.focus();}
+ buttons.forEach((button,i)=>button.addEventListener('click',()=>open(i)));
+ closeBtn.addEventListener('click',close);prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));
+ modal.addEventListener('click',e=>{if(e.target===modal)close();});
+ document.addEventListener('keydown',e=>{
+   if(!modal.classList.contains('open'))return;
+   if(e.key==='Escape'){e.preventDefault();close();}
+   else if(e.key==='ArrowLeft'){e.preventDefault();show(index-1);}
+   else if(e.key==='ArrowRight'){e.preventDefault();show(index+1);}
+   else if(e.key==='Tab'){const controls=[closeBtn,prev,next].filter(el=>!el.hidden);if(e.shiftKey&&document.activeElement===controls[0]){e.preventDefault();controls[controls.length-1].focus();}else if(!e.shiftKey&&document.activeElement===controls[controls.length-1]){e.preventDefault();controls[0].focus();}}
+ });
+})();
+
+
+// Reusable cinematic welcome screen with reduced-motion support and proper focus handling.
+(()=>{
+ const intro=document.getElementById('cinematic-intro'),canvas=document.getElementById('intro-stars'),ctx=canvas&&canvas.getContext('2d'),type=document.getElementById('intro-type'),enterBtn=document.getElementById('enter-scrapbook'),replayBtn=document.getElementById('replay-story'),main=document.querySelector('main.wrap');
+ if(!intro||!canvas||!ctx)return;
+ const msg='A tiny world of memories, music, and all the little things I wanted you to keep.';
+ let stars=[],raf=0,typeTimer=0,typeIndex=0,opened=true,last=0;
+ intro.setAttribute('aria-modal','true');intro.setAttribute('aria-hidden','false');if(main)main.inert=true;
+ function size(){const dpr=Math.min(window.devicePixelRatio||1,1.5);canvas.width=Math.round(innerWidth*dpr);canvas.height=Math.round(innerHeight*dpr);canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(160,Math.floor(innerWidth/5))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:.3+Math.random()*1.5,a:.2+Math.random()*.7,v:.1+Math.random()*.45}));draw(0);}
+ function draw(time){ctx.clearRect(0,0,innerWidth,innerHeight);for(const s of stars){ctx.fillStyle=`rgba(255,225,242,${reduceMotion.matches? s.a:s.a*(.75+.25*Math.sin(time*.001+s.x))})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();if(!reduceMotion.matches){s.y-=s.v;if(s.y<0){s.y=innerHeight;s.x=Math.random()*innerWidth;}}}}
+ function tick(time){if(!opened||document.hidden||reduceMotion.matches){raf=0;return;}if(time-last>32){draw(time);last=time;}raf=requestAnimationFrame(tick);}
+ function startStars(){if(!opened||document.hidden||reduceMotion.matches)return;if(!raf)raf=requestAnimationFrame(tick);}
+ function stopStars(){if(raf)cancelAnimationFrame(raf);raf=0;}
+ function startTyping(){clearTimeout(typeTimer);typeIndex=0;if(reduceMotion.matches){type.textContent=msg;return;}type.textContent='';const step=()=>{if(!opened)return;type.textContent=msg.slice(0,typeIndex++);if(typeIndex<=msg.length)typeTimer=setTimeout(step,34);};typeTimer=setTimeout(step,400);}
+ function enter(){opened=false;intro.classList.add('dismissed');intro.setAttribute('aria-hidden','true');intro.inert=true;if(main)main.inert=false;clearTimeout(typeTimer);stopStars();const target=document.querySelector('#home h1')||document.querySelector('#home');if(target){target.setAttribute('tabindex','-1');target.focus({preventScroll:true});}}
+ function replay(){opened=true;if(main)main.inert=true;intro.inert=false;intro.setAttribute('aria-hidden','false');intro.classList.remove('dismissed');size();startStars();startTyping();enterBtn.focus({preventScroll:true});}
+ size();startStars();startTyping();enterBtn.focus({preventScroll:true});window.addEventListener('resize',()=>{size();if(opened)startStars();},{passive:true});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopStars();else startStars();});
+ if(reduceMotion.addEventListener)reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches){stopStars();draw(0);clearTimeout(typeTimer);type.textContent=msg;}else{startStars();if(opened)startTyping();}});
+ enterBtn.addEventListener('click',enter);
+ if(replayBtn)replayBtn.addEventListener('click',replay);
+})();
+// Interactive envelope: flap opens, seal fades, paper rises and the note types itself.
+(()=>{const env=document.getElementById('love-envelope'),btn=document.getElementById('envelope-toggle'),paper=document.getElementById('typed-love-letter'),sign=document.getElementById('env-sign'),hint=document.getElementById('envelope-hint');const letter='Dear Sinia,\n\nIf I could send a hug through this little screen, I would. Until then, let this note remind you that you matter to me, and that our story has a place in my heart.\n\nMay your days hold soft flowers, warm smiles, and a hundred little reasons to feel loved.';let open=false,timer;function toggle(){open=!open;env.classList.toggle('opened',open);env.setAttribute('aria-expanded',String(open));btn.textContent=open?'Fold the letter away ↩':'Break the seal 💌';hint.textContent=open?'A little note, from my heart to yours.':'A tiny letter, sealed with love and a little stardust.';clearInterval(timer);if(open){paper.textContent='';sign.textContent='';if(reduceMotion.matches){paper.textContent=letter;sign.textContent='— Santanu ♡';}else{let i=0;timer=setInterval(()=>{if(i<letter.length){paper.textContent+=letter[i++]}else{clearInterval(timer);sign.textContent='— Santanu ♡'}},28)}}else{paper.textContent='';sign.textContent=''}}env.addEventListener('click',toggle);env.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});btn.addEventListener('click',toggle)})();
+// A hand-written set of 100 gentle, personal reasons.
+(()=>{const reasons=['Your smile can make an ordinary day feel softer.','You make little moments feel worth remembering.','You have a place in my heart that is yours alone.','Your laugh is one of my favourite sounds.','You bring colour to my everyday thoughts.','You make distance feel a little less powerful.','You are wonderfully, unmistakably you.','Your happiness matters to me.','You inspire me to be more thoughtful.','You make cute things even cuter.','You deserve gentle words on difficult days.','You have your own special kind of magic.','You make memories feel like pressed flowers.','You can turn a simple hello into a highlight.','You are worth listening to.','You make me appreciate small details.','Your presence makes a moment feel warmer.','You remind me to keep hope close.','You have a lovely way of being yourself.','You make the word “us” feel special.','You deserve patience and kindness.','You make ordinary days feel like pages in a story.','You are someone I want to cheer for.','You give me reasons to smile at my phone.','You make little surprises feel meaningful.','You are more than a pretty picture.','Your thoughts and dreams deserve room to grow.','You make me want to remember the good things.','You are a favourite chapter in my scrapbook.','You deserve to feel safe being yourself.','You have a smile worth saving in memory.','You make pink hearts feel appropriate everywhere.','You help me notice beauty in little things.','You are a lovely reason to write a letter.','You make “take care” mean a little more.','You are someone whose day I hope goes well.','You make a shared song feel personal.','You deserve honest affection.','You make the future feel full of pages.','You are a little sunshine on cloudy days.','You have a heart worth treating gently.','You make silly jokes worth repeating.','You are special without needing to prove it.','You bring sweetness to simple conversations.','You deserve to be celebrated, not compared.','You make memories bloom in my mind.','You are a reason to keep learning love.','You make the stars feel a little closer.','You deserve the kind of care that listens.','You make a handwritten note feel timeless.','You are someone I hope feels appreciated.','You make a small “hey” feel like a hug.','You are worthy of calm, safe happiness.','You bring your own light into a room.','You make a scrapbook feel like a treasure chest.','You are a person, not a perfect idea—and that matters.','You deserve room to change and grow.','You make shared playlists feel like little time capsules.','You give tiny moments a story to tell.','You are worth making time for.','You make April 2023 a meaningful chapter.','You deserve to be heard without rushing.','You make the word “miss” carry tenderness.','You are a lovely part of my everyday thoughts.','You deserve affection that respects your boundaries.','You make a simple flower feel like a gift.','You can be both strong and soft.','You are allowed to have difficult days, too.','You make me value kindness more.','You are worth celebrating in big and small ways.','You make little paws and hearts fit our story.','You deserve love that feels patient.','You make a good memory even better by sharing it.','You have dreams that deserve encouragement.','You make a quiet moment feel meaningful.','You deserve to laugh until your cheeks hurt.','You make music feel connected to memories.','You are a favourite person to wish good things for.','You deserve consistency, not just grand gestures.','You make every new page feel possible.','You have a one-of-a-kind way of seeing things.','You deserve to feel proud of yourself.','You make even digital petals feel romantic.','You deserve softness when life feels loud.','You make the distance worth meeting with patience.','You are someone I want to understand better.','You make a tiny universe feel like ours.','You deserve respect in every conversation.','You bring little sparks of joy to my day.','You are worth thoughtful effort.','You make memories I want to keep safely.','You deserve to be loved as your real self.','You make a future chapter something to look forward to.','You are more than any list could ever explain.','You deserve peace as much as excitement.','You make this little website feel personal.','You are a reason to choose gentleness.','You make our story uniquely ours.','You are worth another kind word tomorrow.','And the hundredth reason: because you are Sinia.'];let idx=0;const n=document.getElementById('reason-number'),t=document.getElementById('reason-text');function show(){n.textContent='REASON '+String(idx+1).padStart(2,'0')+' OF 100';t.textContent=reasons[idx];if(!reduceMotion.matches&&typeof t.animate==='function')t.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:350})}document.getElementById('reason-next').addEventListener('click',()=>{idx=(idx+1)%reasons.length;show()});document.getElementById('reason-prev').addEventListener('click',()=>{idx=(idx-1+reasons.length)%reasons.length;show()});show()})();
+// Memory garden blooms into gentle keepsake messages on tap.
+(()=>{const notes=['April 2023: the first page of our story.','A tiny reminder to take care of your heart.','May your next day bring one lovely surprise.','Some memories deserve a little flower pressed beside them.','A pocket-sized hug from Santanu.','Same sky, same stars, a little hope.','You deserve patience, laughter, and soft moments.','One more bloom for all the chapters ahead.'];document.querySelectorAll('.garden-flower').forEach((b,i)=>b.addEventListener('click',()=>{const small=b.querySelector('small');const opened=b.dataset.open==='1';b.dataset.open=opened?'0':'1';small.textContent=opened?'tap to bloom':notes[i];b.querySelector('span').textContent=opened?['🌷','🌼','🌸','🪻','🌺','🌻','🍀','💐'][i]:'💖';if(!opened&&!reduceMotion.matches&&typeof b.animate==='function')b.animate([{transform:'scale(.92)'},{transform:'scale(1)'}],{duration:400})}))})();
+document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(90);const f=document.querySelector('.finale');if(!reduceMotion.matches&&typeof f.animate==='function')f.animate([{filter:'brightness(1)'},{filter:'brightness(1.5)'},{filter:'brightness(1)'}],{duration:1200})});
+
+
+// Interactive love-card templates: changes the preview and the scrapbook's accent palette.
+(()=>{const data={
+ letter:{title:'For my favorite person 💗',text:'Sinia, you make ordinary days feel softer and brighter. If I could give you one thing, it would be the chance to see yourself through my eyes — then you’d understand how special you are to me.',sign:'Always yours, Santanu ♡',colors:['#d76b87','#f5c6d1','#684b4b']},
+ sky:{title:'Same sky, same heart 🌙',text:'Even when we are far apart, look up at the night sky and remember: somewhere beneath these same stars, there is a heart choosing you again and again.',sign:'Across every mile, Santanu ✨',colors:['#8b79bd','#d8d0f4','#433b68']},
+ sunset:{title:'You are my golden hour 🌅',text:'You bring warmth to my quiet days and color to my ordinary moments. If every sunset could hold one wish, I would wish for a thousand more evenings with you.',sign:'My sweetest horizon, Santanu ☀️',colors:['#cf785f','#f7c4a5','#754b43']},
+ garden:{title:'Let our love keep blooming 🌷',text:'May we keep growing with patience, laughing at little things, and finding new reasons to care for each other. Every season with you is another flower in our story.',sign:'Growing with you, Santanu 🌿',colors:['#789a70','#cce4c5','#496247']}
+};document.querySelectorAll('.template-use').forEach(btn=>btn.addEventListener('click',()=>{const d=data[btn.dataset.template];if(!d)return;document.querySelectorAll('.template-use').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));const p=document.getElementById('template-preview');p.querySelector('h3').textContent=d.title;p.querySelector('p').textContent=d.text;p.querySelector('.preview-sign').textContent=d.sign;p.style.borderColor=d.colors[0];p.querySelector('h3').style.color=d.colors[0];p.querySelector('.preview-sign').style.color=d.colors[0];document.documentElement.style.setProperty('--rose',d.colors[0]);document.documentElement.style.setProperty('--pink',d.colors[1]);document.documentElement.style.setProperty('--ink',d.colors[2]);if(!reduceMotion.matches&&typeof p.animate==='function')p.animate([{transform:'scale(.98)',opacity:.7},{transform:'scale(1)',opacity:1}],{duration:300});p.scrollIntoView({behavior:reduceMotion.matches?'auto':'smooth',block:'nearest'});}));})();
+
+</script>
+<script>
+(() => {
+  document.querySelectorAll('.bouquet-give').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.bouquet-card');
+      const open = !card.classList.contains('revealed');
+      card.classList.toggle('revealed', open);
+      button.setAttribute('aria-expanded', String(open));
+      const labels = ['Give these roses ♡', 'Send sunshine 🌼', 'Unwrap a wish ✨'];
+      const index = [...document.querySelectorAll('.bouquet-give')].indexOf(button);
+      button.textContent = open ? 'Fold note away ♡' : (labels[index] || 'Open bouquet ♡');
+    });
+  });
+})();
+</script>
+
+
+<script>
+/* Tiny bouquet petal burst; works offline and respects reduced-motion settings. */
+(() => {
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) return;
+  const flowerBits = ['🌸','🌷','✿','♡','🌼'];
+  document.querySelectorAll('#bouquet-garden .bouquet-give').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.bouquet-card');
+      const art = card && card.querySelector('.bouquet-art');
+      if (!art) return;
+      const rect = art.getBoundingClientRect();
+      for (let i = 0; i < 9; i++) {
+        const petal = document.createElement('span');
+        petal.className = 'bouquet-petal';
+        petal.textContent = flowerBits[Math.floor(Math.random() * flowerBits.length)];
+        petal.style.left = (rect.left + rect.width / 2) + 'px';
+        petal.style.top = (rect.top + rect.height / 2) + 'px';
+        petal.style.setProperty('--dx', (Math.random() * 180 - 90) + 'px');
+        petal.style.setProperty('--dy', (-35 - Math.random() * 125) + 'px');
+        petal.style.setProperty('--rot', (Math.random() * 300 - 150) + 'deg');
+        document.body.appendChild(petal);
+        petal.addEventListener('animationend', () => petal.remove(), {once:true});
+      }
+    });
+  });
+})();
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script>
+(() => {
+ const byId = id => document.getElementById(id);
+ const status = byId('chat-status'), warning = byId('chat-config-warning'), authPanel = byId('chat-auth'), live = byId('chat-live');
+ const authError = byId('chat-auth-error'), log = byId('chat-log'), input = byId('chat-message'), send = byId('chat-send');
+ const setStatus = (message, state='idle') => { status.textContent=message; status.dataset.state=state; };
+ const setComposer = enabled => { input.disabled=!enabled; send.disabled=!enabled; };
+ const config = window.SINIA_CHAT_FIREBASE_CONFIG;
+ if (!config || !config.apiKey || String(config.apiKey).includes('PASTE_') || !window.firebase) {
+   setStatus('Setup needed','error'); return;
+ }
+ try {
+   if (!firebase.apps.length) firebase.initializeApp(config);
+ } catch (e) { setStatus('Configuration error','error'); authError.textContent='Firebase configuration could not be loaded. Check firebase-config.js.'; warning.hidden=true; authPanel.hidden=false; return; }
+ warning.hidden=true; authPanel.hidden=false;
+ const auth=firebase.auth(), db=firebase.firestore();
+ const SANTANU_UID='2GkfLIMj6FPKGX6S0Lp2J5C4fce2', SINIA_UID='IVIamJbrGjagW45ljBIbiYXj2CC3';
+ const claimStatus=byId('gift-claim-status'), claimButton=byId('claim-gift-button'), adminPanel=byId('gift-admin-panel'), claimList=byId('gift-claim-list');
+ let unsubscribeClaims=null, unsubscribeAdminClaims=null;
+ const setClaimStatus=(m,state='')=>{claimStatus.textContent=m;claimStatus.dataset.status=state;};
+ function renderClaimSnapshot(snapshot,user){
+   const mine=snapshot.docs.filter(d=>d.data().uid===user.uid);
+   if(user.uid===SINIA_UID){
+     const latest=mine[0];
+     if(!latest){setClaimStatus('You have not claimed your gift yet. Tap below when ready.');claimButton.disabled=false;claimButton.textContent='Claim my ₹100 gift 💗';return;}
+     const c=latest.data(),state=c.status||'pending';
+     setClaimStatus(state==='pending'?'Your ₹100 gift claim is pending Santanu’s review. 💌':state==='approved'?'Your claim was approved! Santanu still needs to send ₹100 manually via UPI. 💗':state==='rejected'?'Your claim was declined. Talk to Santanu in the chat if you have questions.':'Your gift claim status: '+state,state);
+     claimButton.disabled=state==='pending'||state==='approved';claimButton.textContent=state==='pending'?'Claim submitted ✓':state==='approved'?'Gift claim approved ✓':'Claim my ₹100 gift 💗';
+   }else if(user.uid===SANTANU_UID){setClaimStatus('You are signed in as Santanu. Review Sinia’s claim below.');claimButton.disabled=true;claimButton.textContent='For Sinia to claim';}
+   else{setClaimStatus('This Firebase account is not authorized to claim or review this gift.');claimButton.disabled=true;}
+ }
+ function renderAdminClaims(snapshot){
+   claimList.replaceChildren();
+   if(!snapshot.docs.length){const p=document.createElement('p');p.className='gift-claim-muted';p.textContent='No gift claims yet.';claimList.appendChild(p);return;}
+   snapshot.docs.forEach(doc=>{const c=doc.data(),item=document.createElement('article');item.className='gift-claim-item';const title=document.createElement('strong');title.textContent='₹100 gift claim · '+(c.status||'pending');const detail=document.createElement('p');detail.textContent='From: '+(c.email||'Sinia')+' · Submitted: '+(c.createdAt&&c.createdAt.toDate?c.createdAt.toDate().toLocaleString():'time pending');item.append(title,detail);
+     if(c.status==='pending')for(const choice of [{label:'Approve claim ✓',status:'approved'},{label:'Reject claim',status:'rejected'}]){const b=document.createElement('button');b.type='button';b.className=choice.status==='approved'?'primary':'secondary';b.textContent=choice.label;b.addEventListener('click',async()=>{b.disabled=true;try{await db.collection('giftClaims').doc(doc.id).update({status:choice.status,reviewedAt:firebase.firestore.FieldValue.serverTimestamp(),reviewedBy:currentUser.uid});}catch(e){alert('Could not update this claim. Check Firestore rules and connection.');console.error(e);}finally{b.disabled=false;}});item.appendChild(b);}
+     if(c.status==='approved'){const p=document.createElement('p');p.className='gift-claim-muted';p.textContent='Approved only — payment has not been verified or sent by this website.';item.appendChild(p);}claimList.appendChild(item);
+   });
+ }
+ claimButton.addEventListener('click',async()=>{if(!currentUser){setClaimStatus('Please sign in to the Love Chat first.');return;}if(currentUser.uid!==SINIA_UID){setClaimStatus('Only Sinia’s authorized account can claim this gift.');return;}claimButton.disabled=true;
+   try{const existing=await db.collection('giftClaims').where('uid','==',currentUser.uid).get();if(existing.docs.some(d=>['pending','approved'].includes(d.data().status))){setClaimStatus('You already have a pending or approved claim. Check the status above.');return;}
+     await db.collection('giftClaims').add({amount:100,uid:currentUser.uid,email:currentUser.email||'',status:'pending',createdAt:firebase.firestore.FieldValue.serverTimestamp()});setClaimStatus('Your ₹100 gift claim was submitted! Santanu can now review it. 💌','pending');claimButton.textContent='Claim submitted ✓';
+   }catch(e){setClaimStatus('Could not submit the claim. Check your connection and Firestore rules.');console.error(e);claimButton.disabled=false;}
+ });
+
+ let unsubscribeMessages=null, unsubscribeAuth=null, currentUser=null, lastMessageIds=new Set();
+ const formatTime = ts => { if (!ts || typeof ts.toDate!=='function') return 'sending…'; return new Intl.DateTimeFormat(undefined,{hour:'numeric',minute:'2-digit',month:'short',day:'numeric'}).format(ts.toDate()); };
+ const safeText = (el, value) => { el.textContent=value; };
+ function renderMessages(snapshot) {
+   const atBottom=log.scrollHeight-log.scrollTop-log.clientHeight<90;
+   if (!snapshot || snapshot.empty) { log.replaceChildren(); const empty=document.createElement('div');empty.className='chat-empty';empty.textContent='🌷 No messages yet. Be the first to leave a little love note.';log.appendChild(empty);lastMessageIds.clear();return; }
+   log.replaceChildren(); const ids=new Set();
+   snapshot.forEach(doc=>{const m=doc.data();ids.add(doc.id);const mine=m.uid===currentUser.uid;const bubble=document.createElement('article');bubble.className='chat-message '+(mine?'mine':'theirs');
+     const sender=document.createElement('div');sender.className='chat-sender';sender.textContent=mine?'You ♡':(m.senderName||'My person ♡');
+     const body=document.createElement('div');body.textContent=typeof m.text==='string'?m.text:'';
+     const time=document.createElement('div');time.className='chat-time';time.textContent=formatTime(m.createdAt);
+     bubble.append(sender,body,time);log.appendChild(bubble);
+   });
+   lastMessageIds=ids;if(atBottom)log.scrollTop=log.scrollHeight;
+ }
+ function startChat(user) {
+   if(unsubscribeClaims)unsubscribeClaims();
+   unsubscribeClaims=db.collection('giftClaims').orderBy('createdAt','desc').limit(100).onSnapshot(snapshot=>renderClaimSnapshot(snapshot,user),error=>{setClaimStatus('Could not load gift claim status. Check Firestore rules.');console.error(error);});
+   if(user.uid===SANTANU_UID){adminPanel.hidden=false;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=db.collection('giftClaims').orderBy('createdAt','desc').limit(100).onSnapshot(renderAdminClaims,error=>{claimList.textContent='Could not load claims. Check Firestore rules.';console.error(error);});}
+   else{adminPanel.hidden=true;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;}
+
+   currentUser=user; authPanel.hidden=true;live.hidden=false;setStatus('Connected as '+(user.email||'your account'),'online');setComposer(true);
+   if(unsubscribeMessages)unsubscribeMessages();
+   unsubscribeMessages=db.collection('coupleChats').doc('sinia-santanu').collection('messages').orderBy('createdAt','asc').limitToLast(250).onSnapshot(renderMessages,error=>{setStatus('Could not load messages','error');log.replaceChildren();const p=document.createElement('div');p.className='chat-empty';p.textContent='The chat could not load. Check the Firebase rules and internet connection, then refresh.';log.appendChild(p);console.error('Chat listener:',error.code,error.message);});
+ }
+ byId('chat-login').addEventListener('click',async()=>{
+   authError.textContent='';const email=byId('chat-email').value.trim(),password=byId('chat-password').value;
+   if(!email||!password){authError.textContent='Enter the email and password for your Firebase account.';return;}
+   const button=byId('chat-login');button.disabled=true;button.textContent='Connecting…';setStatus('Signing in…');
+   try{await auth.signInWithEmailAndPassword(email,password);}catch(e){authError.textContent=({'auth/invalid-credential':'Email or password is incorrect.','auth/too-many-requests':'Too many attempts. Wait a while and try again.','auth/network-request-failed':'Network error. Check your connection.'})[e.code]||'Sign-in failed. Check the account and Firebase Authentication setup.';setStatus('Sign-in failed','error');}
+   finally{button.disabled=false;button.textContent='Sign in to our chat ♡';}
+ });
+ byId('chat-password').addEventListener('keydown',e=>{if(e.key==='Enter')byId('chat-login').click();});
+ async function sendMessage(){const text=input.value.trim();if(!text||!currentUser||text.length>1000)return;setComposer(false);try{await db.collection('coupleChats').doc('sinia-santanu').collection('messages').add({text,uid:currentUser.uid,senderName:currentUser.email===window.SINIA_CHAT_ALLOWED_EMAILS?.sinia?'Sinia':'Santanu',createdAt:firebase.firestore.FieldValue.serverTimestamp()});input.value='';}catch(e){setStatus('Message not sent','error');authError.textContent='Could not send this message. Check your internet connection and Firestore rules.';console.error('Send failed:',e.code,e.message);}finally{if(currentUser)setComposer(true);}}
+ send.addEventListener('click',sendMessage);input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}});
+ document.querySelectorAll('[data-emoji]').forEach(b=>b.addEventListener('click',()=>{if(input.disabled)return;const a=input.selectionStart, end=input.selectionEnd;input.setRangeText(b.dataset.emoji,a,end,'end');input.focus();}));
+ byId('chat-signout').addEventListener('click',async()=>{if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;if(unsubscribeClaims)unsubscribeClaims();unsubscribeClaims=null;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;await auth.signOut();live.hidden=true;authPanel.hidden=false;authError.textContent='';setStatus('Signed out');setComposer(false);});
+ unsubscribeAuth=auth.onAuthStateChanged(user=>{if(user)startChat(user);else{currentUser=null;if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;if(unsubscribeClaims)unsubscribeClaims();unsubscribeClaims=null;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;adminPanel.hidden=true;claimButton.disabled=true;setClaimStatus('Sign in to the Love Chat below to claim or review the gift.');live.hidden=true;authPanel.hidden=false;setStatus('Sign in to chat');setComposer(false);}});
+})();
+</script>
+
+</body></html>
