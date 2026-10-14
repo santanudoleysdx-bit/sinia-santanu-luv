@@ -593,6 +593,7 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
   let currentUser = null;
   let claimsUnsubscribe = null;
   let newestClaim = null;
+  let availableClaim = null;
 
   const isSinia = user => !!user && (
     user.uid === 'IVIamJbrGjaw451jBibiYxj2CC3' ||
@@ -617,6 +618,7 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       p.textContent = 'No gift claims yet.';
       listEl.appendChild(p);
       newestClaim = null;
+      availableClaim = null;
       regiftButton.hidden = true;
       claimButton.hidden = !isSinia(currentUser);
       if (isSinia(currentUser)) showStatus('Your ₹100 gift is ready to claim 🎁');
@@ -632,6 +634,7 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       return tb - ta;
     });
     newestClaim = docs[0] || null;
+    availableClaim = docs.find(c => c.status === 'available') || null;
 
     docs.forEach(claim => {
       const card = document.createElement('article');
@@ -688,7 +691,7 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
 
     if (isSinia(currentUser)) {
       const latest = docs[0];
-      if (latest && latest.status === 'available') {
+      if (availableClaim) {
         showStatus('A new ₹100 gift is ready for you 🎁 Tap “Claim my ₹100 gift” when you are ready.');
         claimButton.hidden = false;
       } else {
@@ -729,20 +732,16 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       showStatus('Sign in with Sinia’s authorized Firebase account to submit a claim.');
       return;
     }
-    if (newestClaim && newestClaim.status !== 'available') {
+    if (!availableClaim) {
       showStatus('Your gift is already claimed. Wait until Santanu sends another gift.');
       claimButton.hidden = true;
       return;
     }
     claimButton.disabled = true;
     try {
-      const ref = await db.collection('giftClaims').add({
-        claimantUid: currentUser.uid,
-        amount: 100,
-        status: 'pending',
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-      showStatus('Claim submitted successfully and is pending Santanu’s review. Claim ID: ' + ref.id);
+      const claimId = availableClaim.id;
+      await db.collection('giftClaims').doc(claimId).update({ status: 'pending' });
+      showStatus('Gift claimed successfully and is pending Santanu’s review. Claim ID: ' + claimId);
       claimButton.hidden = true;
       regiftButton.hidden = true;
     } catch (err) {
