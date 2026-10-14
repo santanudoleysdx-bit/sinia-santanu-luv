@@ -173,14 +173,6 @@ footer{text-align:center;padding:40px 0 55px;color:#987b71;font-size:.9rem}foote
 @media(max-width:560px){.chat-auth-row{grid-template-columns:1fr}.chat-log{padding:12px;height:55vh}.chat-message{max-width:92%}.chat-top{padding:15px}.chat-compose{padding:10px}.chat-send{padding:12px}.chat-compose-row{gap:6px}}
 @media(prefers-reduced-motion:reduce){.chat-message{animation:none!important}}
 
-
-/* Claim-first ₹100 gift flow */
-.gift-claim-panel{max-width:650px;margin:22px auto 0;padding:20px;background:#fffdf8;border:1px solid #e9c8d1;border-radius:16px;text-align:left}
-.gift-claim-panel h3{font:1.35rem Georgia,serif;margin:0 0 9px;color:#805164}.gift-claim-panel p{line-height:1.65}
-.gift-claim-status{padding:12px;border-radius:10px;background:#fff2f5;color:#805164;line-height:1.6;margin:12px 0}
-.gift-claim-status[data-status="approved"]{background:#edf7e9;color:#426b43}.gift-claim-status[data-status="rejected"]{background:#fff0ed;color:#984d4d}.gift-claim-status[data-status="pending"]{background:#fff6df;color:#805f25}
-.gift-claim-actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.gift-claim-list{display:grid;gap:10px;margin-top:12px}
-.gift-claim-item{padding:13px;border:1px solid #ead8cb;border-radius:12px;background:#fffaf4}.gift-claim-item p{margin:5px 0;overflow-wrap:anywhere}.gift-claim-item button{margin:7px 6px 0 0}.gift-claim-muted{font-size:.82rem;color:#92736b}
 </style></head>
 <body><div class="paper-texture" aria-hidden="true"></div><div class="ribbon" aria-hidden="true"></div><div class="floral-corner left" aria-hidden="true">💐</div><div class="floral-corner right" aria-hidden="true">🌸</div>
 <div id="cinematic-intro" role="dialog" aria-modal="true" aria-hidden="false" aria-label="A little surprise for Sinia"><canvas id="intro-stars"></canvas><div class="intro-orbs"><i></i><i></i><i></i></div><div class="intro-copy"><div class="intro-overline">a little universe made for one person</div><h1>For Sinia</h1><p id="intro-type"></p><button class="intro-enter" id="enter-scrapbook">Open our little world ♡</button></div></div>
@@ -225,8 +217,7 @@ footer{text-align:center;padding:40px 0 55px;color:#987b71;font-size:.9rem}foote
 <section id="surprise-gift" class="premium-section">
  <div class="wrap"><div class="section-head"><div class="kicker">a little secret, just for you</div><h2>🎁 Your surprise gift</h2><p>Sinia, tap the gift to unwrap a tiny piece of Santanu's heart.</p></div>
  <div class="gift-stage"><button class="gift-box" id="gift-box" type="button" aria-label="Open surprise gift" aria-expanded="false" aria-controls="gift-message"><span class="gift-lid"></span><span class="gift-base"></span><span class="gift-ribbon-v"></span><span class="gift-bow"></span></button><p><strong>One little box. A thousand feelings. ♡</strong></p><button class="primary" id="open-gift" type="button" aria-expanded="false" aria-controls="gift-message">Open your gift ✨</button>
- <div class="gift-message" id="gift-message" aria-live="polite"><div style="font-size:2rem">💌 🌷 🐈 🐇</div><div class="scribble">Dear Sinia,</div><p>If I could wrap up one feeling and give it to you, it would be the comfort of knowing you are loved, appreciated, and never ordinary to me.</p><p>From April 2023 to every little chapter still ahead, you're one of my favourite parts of this story.</p><p><strong>Forever your teammate in this little world, — Santanu ♡</strong></p><button class="secondary" id="close-gift" type="button">Fold the note away</button></div>
-  <div class="gift-claim-panel" id="gift-claim-panel"><h3>💝 Claim your ₹100 gift</h3><p>Sinia, submit a gift claim here for Santanu to review. If approved, he will manually send ₹100 via UPI. Approval does not mean payment has been sent.</p><div id="gift-claim-status" class="gift-claim-status" aria-live="polite">Sign in to the Love Chat below to claim or review the gift.</div><div class="gift-claim-actions"><button class="primary" id="claim-gift-button" type="button" disabled>Claim my ₹100 gift 💗</button></div><p class="gift-claim-muted">Sign in with the authorized Firebase account. Your claim status is stored in Firestore.</p><div id="gift-admin-panel" hidden><hr style="border:0;border-top:1px solid #ead8cb;margin:18px 0"><h3>🔐 Santanu's claim approvals</h3><p class="gift-claim-muted">Review claims below. Approval only changes claim status; send money separately via UPI.</p><div id="gift-claim-list" class="gift-claim-list"><p class="gift-claim-muted">Loading claims…</p></div></div></div></div>
+ <div class="gift-message" id="gift-message" aria-live="polite"><div style="font-size:2rem">💌 🌷 🐈 🐇</div><div class="scribble">Dear Sinia,</div><p>If I could wrap up one feeling and give it to you, it would be the comfort of knowing you are loved, appreciated, and never ordinary to me.</p><p>From April 2023 to every little chapter still ahead, you're one of my favourite parts of this story.</p><p><strong>Forever your teammate in this little world, — Santanu ♡</strong></p><button class="secondary" id="close-gift" type="button">Fold the note away</button></div></div></div>
 </section>
 <section id="starlit-world" class="premium-section"><div class="wrap"><div class="section-head"><div class="kicker">our own little universe</div><h2>🌌 Our little starlit world</h2><p>Twinkling stars and floating hearts, made just for the two of you — lightweight, local, and gentle on your phone.</p></div>
  <div class="sky-wrap"><canvas id="love-sky" aria-label="Decorative star field with floating hearts"></canvas><div class="sky-caption">Somewhere in this huge universe, I'm glad it's you. ♡</div></div><p class="premium-note" style="text-align:center;margin-top:12px">This little sky runs locally without external JavaScript libraries. Your photos, GIFs, and seven included MP3s stay inside this scrapbook.</p>
@@ -248,6 +239,31 @@ footer{text-align:center;padding:40px 0 55px;color:#987b71;font-size:.9rem}foote
 <section id="100-reasons"><div class="section-head"><div class="kicker">one hundred tiny reminders</div><h2>100 reasons I adore you ❤️</h2><p>One at a time, like little notes tucked into your pocket. Tap next to turn the page.</p></div><div class="reasons-wrap"><div class="reason-number" id="reason-number">REASON 01 OF 100</div><div class="reason-text" id="reason-text" aria-live="polite">Your smile can make an ordinary day feel softer.</div><div class="actions"><button class="secondary" id="reason-prev">← Previous</button><button class="primary" id="reason-next">Another reason ♡ →</button></div></div></section>
 <section id="memory-garden"><div class="section-head"><div class="kicker">little things that keep growing</div><h2>Our memory garden 🌸</h2><p>Tap a flower to uncover a little reminder. Every bloom stands for a feeling worth keeping.</p></div><div class="garden" id="memory-garden-grid"><button class="garden-flower"><span>🌷</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌼</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌸</span><small>tap to bloom</small></button><button class="garden-flower"><span>🪻</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌺</span><small>tap to bloom</small></button><button class="garden-flower"><span>🌻</span><small>tap to bloom</small></button><button class="garden-flower"><span>🍀</span><small>tap to bloom</small></button><button class="garden-flower"><span>💐</span><small>tap to bloom</small></button></div></section>
 <section id="grand-finale"><div class="finale"><div class="finale-heart">💗</div><div class="kicker" style="color:#ffc0d7">one last page, for now</div><h2>Hey, Sinia…</h2><p>If this little scrapbook could give you one thing, I hope it gives you a smile and reminds you that you're a beautiful part of my story. From April 2023 onward, may there always be more kind words, tiny adventures, and pages worth keeping.</p><p class="handwriting" style="font-size:1.5rem;color:#ffc0d7">With all my love, — Santanu ♡</p><div class="finale-actions"><button class="primary" id="finale-sparkles" type="button">Make the sky sparkle ✨</button> <button class="secondary" id="replay-story" type="button">Replay our story ↺</button></div></div></section>
+
+
+<section id="gift-dashboard" aria-labelledby="gift-dashboard-title">
+  <div class="section-head">
+    <div class="kicker">a little gift, handled safely</div>
+    <h2 id="gift-dashboard-title">Our ₹100 gift 💝</h2>
+    <p>Sinia can submit a claim. Santanu can review it, open a UPI payment on his own phone, and record when the money has actually been sent.</p>
+  </div>
+  <div class="chat-shell" style="padding:20px">
+    <div id="gift-status" class="chat-unconfigured" role="status" aria-live="polite">
+      Connecting to Firebase… Sign in to the scrapbook chat with the correct account to use gift claims.
+    </div>
+    <div id="gift-claim-controls" hidden style="margin-top:16px;text-align:center">
+      <p>One claim creates one record. You can send another gift later using the regift button after the previous claim is handled.</p>
+      <button class="primary" id="gift-claim-button" type="button">Claim my ₹100 gift 🎁</button>
+      <button class="secondary" id="gift-regift-button" type="button" hidden>Send another gift ♡</button>
+    </div>
+    <div id="gift-admin" hidden style="margin-top:20px">
+      <h3 style="font-family:Georgia,serif;font-weight:400">Santanu's gift dashboard</h3>
+      <p class="chat-hint">Pending claims appear here automatically while you are signed in. Tap Pay to open a UPI app on your phone; only mark it paid after you verify the payment succeeded.</p>
+      <div id="gift-claim-list" aria-live="polite"></div>
+    </div>
+    <p class="chat-note" style="margin-top:14px">A claim is not a payment receipt. GPay/UPI must be completed manually, and the dashboard must be marked paid only after you confirm success.</p>
+  </div>
+</section>
 
 <section id="love-chat" aria-labelledby="chat-title">
   <div class="section-head"><div class="kicker">a little space just for us</div><h2 id="chat-title">Our Love Chat 💬</h2><p>For the little things, the long days, the random songs, and the moments when you just want to say “hey, I miss you.” Messages sync between our phones when the chat is configured online.</p></div>
@@ -506,35 +522,6 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
  } catch (e) { setStatus('Configuration error','error'); authError.textContent='Firebase configuration could not be loaded. Check firebase-config.js.'; warning.hidden=true; authPanel.hidden=false; return; }
  warning.hidden=true; authPanel.hidden=false;
  const auth=firebase.auth(), db=firebase.firestore();
- const SANTANU_UID='2GkfLIMj6FPKGX6S0Lp2J5C4fce2', SINIA_UID='IVIamJbrGjagW45ljBIbiYXj2CC3';
- const claimStatus=byId('gift-claim-status'), claimButton=byId('claim-gift-button'), adminPanel=byId('gift-admin-panel'), claimList=byId('gift-claim-list');
- let unsubscribeClaims=null, unsubscribeAdminClaims=null;
- const setClaimStatus=(m,state='')=>{claimStatus.textContent=m;claimStatus.dataset.status=state;};
- function renderClaimSnapshot(snapshot,user){
-   const mine=snapshot.docs.filter(d=>d.data().uid===user.uid);
-   if(user.uid===SINIA_UID){
-     const latest=mine[0];
-     if(!latest){setClaimStatus('You have not claimed your gift yet. Tap below when ready.');claimButton.disabled=false;claimButton.textContent='Claim my ₹100 gift 💗';return;}
-     const c=latest.data(),state=c.status||'pending';
-     setClaimStatus(state==='pending'?'Your ₹100 gift claim is pending Santanu’s review. 💌':state==='approved'?'Your claim was approved! Santanu still needs to send ₹100 manually via UPI. 💗':state==='rejected'?'Your claim was declined. Talk to Santanu in the chat if you have questions.':'Your gift claim status: '+state,state);
-     claimButton.disabled=state==='pending'||state==='approved';claimButton.textContent=state==='pending'?'Claim submitted ✓':state==='approved'?'Gift claim approved ✓':'Claim my ₹100 gift 💗';
-   }else if(user.uid===SANTANU_UID){setClaimStatus('You are signed in as Santanu. Review Sinia’s claim below.');claimButton.disabled=true;claimButton.textContent='For Sinia to claim';}
-   else{setClaimStatus('This Firebase account is not authorized to claim or review this gift.');claimButton.disabled=true;}
- }
- function renderAdminClaims(snapshot){
-   claimList.replaceChildren();
-   if(!snapshot.docs.length){const p=document.createElement('p');p.className='gift-claim-muted';p.textContent='No gift claims yet.';claimList.appendChild(p);return;}
-   snapshot.docs.forEach(doc=>{const c=doc.data(),item=document.createElement('article');item.className='gift-claim-item';const title=document.createElement('strong');title.textContent='₹100 gift claim · '+(c.status||'pending');const detail=document.createElement('p');detail.textContent='From: '+(c.email||'Sinia')+' · Submitted: '+(c.createdAt&&c.createdAt.toDate?c.createdAt.toDate().toLocaleString():'time pending');item.append(title,detail);
-     if(c.status==='pending')for(const choice of [{label:'Approve claim ✓',status:'approved'},{label:'Reject claim',status:'rejected'}]){const b=document.createElement('button');b.type='button';b.className=choice.status==='approved'?'primary':'secondary';b.textContent=choice.label;b.addEventListener('click',async()=>{b.disabled=true;try{await db.collection('giftClaims').doc(doc.id).update({status:choice.status,reviewedAt:firebase.firestore.FieldValue.serverTimestamp(),reviewedBy:currentUser.uid});}catch(e){alert('Could not update this claim. Check Firestore rules and connection.');console.error(e);}finally{b.disabled=false;}});item.appendChild(b);}
-     if(c.status==='approved'){const p=document.createElement('p');p.className='gift-claim-muted';p.textContent='Approved only — payment has not been verified or sent by this website.';item.appendChild(p);}claimList.appendChild(item);
-   });
- }
- claimButton.addEventListener('click',async()=>{if(!currentUser){setClaimStatus('Please sign in to the Love Chat first.');return;}if(currentUser.uid!==SINIA_UID){setClaimStatus('Only Sinia’s authorized account can claim this gift.');return;}claimButton.disabled=true;
-   try{const existing=await db.collection('giftClaims').where('uid','==',currentUser.uid).get();if(existing.docs.some(d=>['pending','approved'].includes(d.data().status))){setClaimStatus('You already have a pending or approved claim. Check the status above.');return;}
-     await db.collection('giftClaims').add({amount:100,uid:currentUser.uid,email:currentUser.email||'',status:'pending',createdAt:firebase.firestore.FieldValue.serverTimestamp()});setClaimStatus('Your ₹100 gift claim was submitted! Santanu can now review it. 💌','pending');claimButton.textContent='Claim submitted ✓';
-   }catch(e){setClaimStatus('Could not submit the claim. Check your connection and Firestore rules.');console.error(e);claimButton.disabled=false;}
- });
-
  let unsubscribeMessages=null, unsubscribeAuth=null, currentUser=null, lastMessageIds=new Set();
  const formatTime = ts => { if (!ts || typeof ts.toDate!=='function') return 'sending…'; return new Intl.DateTimeFormat(undefined,{hour:'numeric',minute:'2-digit',month:'short',day:'numeric'}).format(ts.toDate()); };
  const safeText = (el, value) => { el.textContent=value; };
@@ -551,11 +538,6 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
    lastMessageIds=ids;if(atBottom)log.scrollTop=log.scrollHeight;
  }
  function startChat(user) {
-   if(unsubscribeClaims)unsubscribeClaims();
-   unsubscribeClaims=db.collection('giftClaims').orderBy('createdAt','desc').limit(100).onSnapshot(snapshot=>renderClaimSnapshot(snapshot,user),error=>{setClaimStatus('Could not load gift claim status. Check Firestore rules.');console.error(error);});
-   if(user.uid===SANTANU_UID){adminPanel.hidden=false;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=db.collection('giftClaims').orderBy('createdAt','desc').limit(100).onSnapshot(renderAdminClaims,error=>{claimList.textContent='Could not load claims. Check Firestore rules.';console.error(error);});}
-   else{adminPanel.hidden=true;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;}
-
    currentUser=user; authPanel.hidden=true;live.hidden=false;setStatus('Connected as '+(user.email||'your account'),'online');setComposer(true);
    if(unsubscribeMessages)unsubscribeMessages();
    unsubscribeMessages=db.collection('coupleChats').doc('sinia-santanu').collection('messages').orderBy('createdAt','asc').limitToLast(250).onSnapshot(renderMessages,error=>{setStatus('Could not load messages','error');log.replaceChildren();const p=document.createElement('div');p.className='chat-empty';p.textContent='The chat could not load. Check the Firebase rules and internet connection, then refresh.';log.appendChild(p);console.error('Chat listener:',error.code,error.message);});
@@ -571,8 +553,210 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
  async function sendMessage(){const text=input.value.trim();if(!text||!currentUser||text.length>1000)return;setComposer(false);try{await db.collection('coupleChats').doc('sinia-santanu').collection('messages').add({text,uid:currentUser.uid,senderName:currentUser.email===window.SINIA_CHAT_ALLOWED_EMAILS?.sinia?'Sinia':'Santanu',createdAt:firebase.firestore.FieldValue.serverTimestamp()});input.value='';}catch(e){setStatus('Message not sent','error');authError.textContent='Could not send this message. Check your internet connection and Firestore rules.';console.error('Send failed:',e.code,e.message);}finally{if(currentUser)setComposer(true);}}
  send.addEventListener('click',sendMessage);input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}});
  document.querySelectorAll('[data-emoji]').forEach(b=>b.addEventListener('click',()=>{if(input.disabled)return;const a=input.selectionStart, end=input.selectionEnd;input.setRangeText(b.dataset.emoji,a,end,'end');input.focus();}));
- byId('chat-signout').addEventListener('click',async()=>{if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;if(unsubscribeClaims)unsubscribeClaims();unsubscribeClaims=null;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;await auth.signOut();live.hidden=true;authPanel.hidden=false;authError.textContent='';setStatus('Signed out');setComposer(false);});
- unsubscribeAuth=auth.onAuthStateChanged(user=>{if(user)startChat(user);else{currentUser=null;if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;if(unsubscribeClaims)unsubscribeClaims();unsubscribeClaims=null;if(unsubscribeAdminClaims)unsubscribeAdminClaims();unsubscribeAdminClaims=null;adminPanel.hidden=true;claimButton.disabled=true;setClaimStatus('Sign in to the Love Chat below to claim or review the gift.');live.hidden=true;authPanel.hidden=false;setStatus('Sign in to chat');setComposer(false);}});
+ byId('chat-signout').addEventListener('click',async()=>{if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;await auth.signOut();live.hidden=true;authPanel.hidden=false;authError.textContent='';setStatus('Signed out');setComposer(false);});
+ unsubscribeAuth=auth.onAuthStateChanged(user=>{if(user)startChat(user);else{currentUser=null;if(unsubscribeMessages)unsubscribeMessages();unsubscribeMessages=null;live.hidden=true;authPanel.hidden=false;setStatus('Sign in to chat');setComposer(false);}});
+})();
+</script>
+
+
+<script>
+/* Gift claims share the same Firebase project/authentication as the chat. */
+(() => {
+  const $ = id => document.getElementById(id);
+  const statusEl = $('gift-status');
+  const claimControls = $('gift-claim-controls');
+  const claimButton = $('gift-claim-button');
+  const regiftButton = $('gift-regift-button');
+  const adminPanel = $('gift-admin');
+  const listEl = $('gift-claim-list');
+
+  const config = window.SINIA_CHAT_FIREBASE_CONFIG;
+  if (!config || !config.apiKey || !window.firebase) {
+    statusEl.textContent = 'Gift claims need the same working Firebase configuration as the chat. Check firebase-config.js first.';
+    return;
+  }
+
+  try {
+    if (!firebase.apps.length) firebase.initializeApp(config);
+  } catch (err) {
+    statusEl.textContent = 'Firebase could not initialize. Check firebase-config.js.';
+    return;
+  }
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const allowed = window.SINIA_CHAT_ALLOWED_EMAILS || {};
+  const upiId = 'siniabendung@oksbi';
+  let currentUser = null;
+  let claimsUnsubscribe = null;
+  let newestClaim = null;
+
+  const isSinia = user => !!user && (
+    user.uid === 'IVIamJbrGjaw451jBibiYxj2CC3' ||
+    (allowed.sinia && user.email && user.email.toLowerCase() === String(allowed.sinia).toLowerCase())
+  );
+  const isSantanu = user => !!user && (
+    user.uid === '2GkfLJM6jFPGKX650Lp2J5C4fce2' ||
+    (allowed.santanu && user.email && user.email.toLowerCase() === String(allowed.santanu).toLowerCase())
+  );
+
+  const formatDate = value => {
+    if (!value || typeof value.toDate !== 'function') return 'Just now';
+    return value.toDate().toLocaleString();
+  };
+  const showStatus = message => { statusEl.textContent = message; };
+
+  function renderClaims(snapshot) {
+    listEl.replaceChildren();
+    if (snapshot.empty) {
+      const p = document.createElement('p');
+      p.className = 'chat-hint';
+      p.textContent = 'No gift claims yet.';
+      listEl.appendChild(p);
+      newestClaim = null;
+      regiftButton.hidden = isSinia(currentUser);
+      return;
+    }
+
+    const docs = [];
+    snapshot.forEach(doc => docs.push({ id: doc.id, ...doc.data() }));
+    docs.sort((a,b) => {
+      const ta = a.createdAt && a.createdAt.toMillis ? a.createdAt.toMillis() : 0;
+      const tb = b.createdAt && b.createdAt.toMillis ? b.createdAt.toMillis() : 0;
+      return tb - ta;
+    });
+    newestClaim = docs[0] || null;
+
+    docs.forEach(claim => {
+      const card = document.createElement('article');
+      card.style.cssText = 'border:1px solid #ead8cf;border-radius:12px;padding:14px;margin:10px 0;background:#fffdf8';
+      const title = document.createElement('strong');
+      title.textContent = '₹' + (claim.amount || 100) + ' · ' + String(claim.status || 'unknown').toUpperCase();
+      const meta = document.createElement('p');
+      meta.className = 'chat-hint';
+      meta.textContent = 'Claim ID: ' + claim.id + ' · Submitted: ' + formatDate(claim.createdAt);
+      card.append(title, meta);
+
+      if (isSantanu(currentUser) && claim.status === 'pending') {
+        const pay = document.createElement('button');
+        pay.className = 'primary';
+        pay.type = 'button';
+        pay.textContent = 'Pay Sinia ₹100 via UPI';
+        pay.style.margin = '4px 8px 4px 0';
+        pay.addEventListener('click', () => {
+          const params = new URLSearchParams({
+            pa: upiId, pn: 'Sinia Techi', am: String(claim.amount || 100),
+            cu: 'INR', tn: 'Gift for Sinia - ' + claim.id
+          });
+          window.location.href = 'upi://pay?' + params.toString();
+        });
+
+        const approve = document.createElement('button');
+        approve.className = 'secondary';
+        approve.type = 'button';
+        approve.textContent = 'Approve claim';
+        approve.style.margin = '4px 8px 4px 0';
+        approve.addEventListener('click', () => updateClaim(claim.id, 'approved'));
+
+        const reject = document.createElement('button');
+        reject.className = 'secondary';
+        reject.type = 'button';
+        reject.textContent = 'Reject';
+        reject.style.margin = '4px 8px 4px 0';
+        reject.addEventListener('click', () => updateClaim(claim.id, 'rejected'));
+
+        const paid = document.createElement('button');
+        paid.className = 'secondary';
+        paid.type = 'button';
+        paid.textContent = 'Mark paid';
+        paid.style.margin = '4px 8px 4px 0';
+        paid.addEventListener('click', () => {
+          if (confirm('Only continue if your UPI app/bank confirms the ₹' + (claim.amount || 100) + ' payment succeeded. Mark this claim as paid?')) {
+            updateClaim(claim.id, 'paid');
+          }
+        });
+        card.append(pay, approve, reject, paid);
+      }
+      listEl.appendChild(card);
+    });
+
+    if (isSinia(currentUser)) {
+      const latest = docs[0];
+      showStatus(latest ? 'Your latest gift claim is: ' + latest.status + ' · ' + formatDate(latest.createdAt) : 'No claim submitted yet.');
+      claimButton.hidden = !!latest && latest.status === 'pending';
+      regiftButton.hidden = !(latest && ['approved','rejected','paid'].includes(latest.status));
+    } else if (isSantanu(currentUser)) {
+      showStatus('Gift dashboard connected. ' + docs.filter(c => c.status === 'pending').length + ' pending claim(s).');
+    }
+  }
+
+  async function updateClaim(id, newStatus) {
+    if (!isSantanu(currentUser)) return;
+    try {
+      const update = {
+        status: newStatus,
+        reviewedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        reviewedBy: currentUser.uid
+      };
+      await db.collection('giftClaims').doc(id).update(update);
+      showStatus('Claim updated to ' + newStatus + '.');
+    } catch (err) {
+      console.error('Gift claim update failed:', err);
+      showStatus('Could not update claim. Your Firestore rules may not yet allow the "' + newStatus + '" status. Update the rules before trying again.');
+    }
+  }
+
+  async function submitClaim() {
+    if (!isSinia(currentUser)) {
+      showStatus('Sign in with Sinia’s authorized Firebase account to submit a claim.');
+      return;
+    }
+    claimButton.disabled = true;
+    try {
+      const ref = await db.collection('giftClaims').add({
+        claimantUid: currentUser.uid,
+        amount: 100,
+        status: 'pending',
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      showStatus('Claim submitted successfully and is pending Santanu’s review. Claim ID: ' + ref.id);
+      claimButton.hidden = true;
+      regiftButton.hidden = true;
+    } catch (err) {
+      console.error('Gift claim submission failed:', err);
+      showStatus('Claim was not saved. Check Firestore rules and confirm Sinia is signed in. No notification is sent automatically by this button.');
+    } finally {
+      claimButton.disabled = false;
+    }
+  }
+
+  claimButton.addEventListener('click', submitClaim);
+  regiftButton.addEventListener('click', () => {
+    claimButton.hidden = false;
+    regiftButton.hidden = true;
+    showStatus('Ready for a new gift claim. Tap “Claim my ₹100 gift”.');
+  });
+
+  auth.onAuthStateChanged(user => {
+    currentUser = user;
+    if (claimsUnsubscribe) { claimsUnsubscribe(); claimsUnsubscribe = null; }
+    claimControls.hidden = !user || (!isSinia(user) && !isSantanu(user));
+    adminPanel.hidden = !isSantanu(user);
+    if (!user) {
+      showStatus('Sign in to the scrapbook chat with the authorized account to view or submit gift claims.');
+      return;
+    }
+    if (!isSinia(user) && !isSantanu(user)) {
+      showStatus('This account is not authorized to access gift claims.');
+      claimControls.hidden = true;
+      return;
+    }
+    showStatus('Loading gift claims…');
+    claimsUnsubscribe = db.collection('giftClaims').onSnapshot(renderClaims, err => {
+      console.error('Gift claims listener failed:', err);
+      showStatus('Could not load claims. Check that Firestore rules allow authorized users to read giftClaims.');
+    });
+  });
 })();
 </script>
 
