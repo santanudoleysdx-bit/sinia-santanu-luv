@@ -252,13 +252,15 @@ footer{text-align:center;padding:40px 0 55px;color:#987b71;font-size:.9rem}foote
       Connecting to Firebase… Sign in to the scrapbook chat with the correct account to use gift claims.
     </div>
     <div id="gift-claim-controls" hidden style="margin-top:16px;text-align:center">
-      <p>One claim creates one record. You can send another gift later using the regift button after the previous claim is handled.</p>
+      <p>Submit your first gift claim here. Santanu can renew it from his dashboard after the previous claim is handled.</p>
       <button class="primary" id="gift-claim-button" type="button">Claim my ₹100 gift 🎁</button>
-      <button class="secondary" id="gift-regift-button" type="button" hidden>Send another gift ♡</button>
     </div>
     <div id="gift-admin" hidden style="margin-top:20px">
       <h3 style="font-family:Georgia,serif;font-weight:400">Santanu's gift dashboard</h3>
-      <p class="chat-hint">Pending claims appear here automatically while you are signed in. Tap Pay to open a UPI app on your phone; only mark it paid after you verify the payment succeeded.</p>
+      <p class="chat-hint">Review claims here. Tap Pay to open a UPI app on your phone; only mark it paid after you verify the payment succeeded.</p>
+      <div style="margin:12px 0 16px;text-align:center">
+        <button class="secondary" id="gift-regift-button" type="button" hidden>Send another gift ♡</button>
+      </div>
       <div id="gift-claim-list" aria-live="polite"></div>
     </div>
     <p class="chat-note" style="margin-top:14px">A claim is not a payment receipt. GPay/UPI must be completed manually, and the dashboard must be marked paid only after you confirm success.</p>
@@ -567,6 +569,7 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
   const claimControls = $('gift-claim-controls');
   const claimButton = $('gift-claim-button');
   const regiftButton = $('gift-regift-button');
+  const siniaUid = 'IVIamJbrGjaw451jBibiYxj2CC3';
   const adminPanel = $('gift-admin');
   const listEl = $('gift-claim-list');
 
@@ -614,7 +617,10 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       p.textContent = 'No gift claims yet.';
       listEl.appendChild(p);
       newestClaim = null;
-      regiftButton.hidden = isSinia(currentUser);
+      regiftButton.hidden = true;
+      claimButton.hidden = !isSinia(currentUser);
+      if (isSinia(currentUser)) showStatus('Your ₹100 gift is ready to claim 🎁');
+      else if (isSantanu(currentUser)) showStatus('Gift dashboard connected. No claims yet.');
       return;
     }
 
@@ -682,10 +688,22 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
 
     if (isSinia(currentUser)) {
       const latest = docs[0];
-      showStatus(latest ? 'Your latest gift claim is: ' + latest.status + ' · ' + formatDate(latest.createdAt) : 'No claim submitted yet.');
-      claimButton.hidden = !!latest && latest.status === 'pending';
-      regiftButton.hidden = !(latest && ['approved','rejected','paid'].includes(latest.status));
+      if (latest && latest.status === 'available') {
+        showStatus('A new ₹100 gift is ready for you 🎁 Tap “Claim my ₹100 gift” when you are ready.');
+        claimButton.hidden = false;
+      } else {
+        showStatus('Your gift is claimed 💝 · ' + String(latest.status || 'claimed') + ' · ' + formatDate(latest.createdAt) + '. It will stay claimed until Santanu sends another gift.');
+        // Keep the claim button hidden until Santanu creates the next available gift.
+        claimButton.hidden = true;
+      }
     } else if (isSantanu(currentUser)) {
+      const hasPending = docs.some(c => c.status === 'pending');
+      const hasAvailable = docs.some(c => c.status === 'available');
+      const latestHandled = newestClaim && ['approved','rejected','paid'].includes(newestClaim.status);
+      const canRegift = !!latestHandled && !hasPending && !hasAvailable;
+      regiftButton.hidden = !canRegift;
+      regiftButton.disabled = !canRegift;
+      claimButton.hidden = true;
       showStatus('Gift dashboard connected. ' + docs.filter(c => c.status === 'pending').length + ' pending claim(s).');
     }
   }
@@ -711,6 +729,11 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       showStatus('Sign in with Sinia’s authorized Firebase account to submit a claim.');
       return;
     }
+    if (newestClaim && newestClaim.status !== 'available') {
+      showStatus('Your gift is already claimed. Wait until Santanu sends another gift.');
+      claimButton.hidden = true;
+      return;
+    }
     claimButton.disabled = true;
     try {
       const ref = await db.collection('giftClaims').add({
@@ -731,17 +754,42 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
   }
 
   claimButton.addEventListener('click', submitClaim);
-  regiftButton.addEventListener('click', () => {
-    claimButton.hidden = false;
-    regiftButton.hidden = true;
-    showStatus('Ready for a new gift claim. Tap “Claim my ₹100 gift”.');
-  });
+  async function sendAnotherGift() {
+    if (!isSantanu(currentUser)) {
+      showStatus('Sign in with Santanu’s authorized account to send another gift.');
+      return;
+    }
+    if (regiftButton.disabled) return;
+    regiftButton.disabled = true;
+    regiftButton.textContent = 'Creating gift claim…';
+    try {
+      // Keep previous claim documents; each regift is a separate record for Sinia.
+      const ref = await db.collection('giftClaims').add({
+        claimantUid: siniaUid,
+        amount: 100,
+        status: 'available',
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        createdBy: currentUser.uid,
+        initiatedBy: 'santanu'
+      });
+      showStatus('A new ₹100 gift is ready for Sinia to claim. Claim ID: ' + ref.id);
+    } catch (err) {
+      console.error('Regift creation failed:', err);
+      showStatus('Could not create the new claim. Firestore rules may need to allow Santanu to create a giftClaims record for Sinia. No money was sent.');
+    } finally {
+      regiftButton.disabled = false;
+      regiftButton.textContent = 'Send another gift ♡';
+    }
+  }
+  regiftButton.addEventListener('click', sendAnotherGift);
 
   auth.onAuthStateChanged(user => {
     currentUser = user;
     if (claimsUnsubscribe) { claimsUnsubscribe(); claimsUnsubscribe = null; }
-    claimControls.hidden = !user || (!isSinia(user) && !isSantanu(user));
+    claimControls.hidden = !user || !isSinia(user);
+    claimButton.hidden = !isSinia(user);
     adminPanel.hidden = !isSantanu(user);
+    regiftButton.hidden = !isSantanu(user);
     if (!user) {
       showStatus('Sign in to the scrapbook chat with the authorized account to view or submit gift claims.');
       return;
