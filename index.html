@@ -745,8 +745,10 @@ document.getElementById('finale-sparkles').addEventListener('click',()=>{petals(
       claimButton.hidden = true;
       regiftButton.hidden = true;
     } catch (err) {
-      console.error('Gift claim submission failed:', err);
-      showStatus('Claim was not saved. Check Firestore rules and confirm Sinia is signed in. No notification is sent automatically by this button.');
+      console.error('Gift claim submission failed:', err && err.code, err && err.message, err);
+      const code = err && err.code ? String(err.code) : 'unknown-error';
+      const detail = err && err.message ? String(err.message) : 'No additional details were provided.';
+      showStatus('Claim failed (' + code + '): ' + detail + ' — the gift was not changed.');
     } finally {
       claimButton.disabled = false;
     }
